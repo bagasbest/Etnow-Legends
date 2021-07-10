@@ -2,7 +2,6 @@
     <!-- Base application theme. -->
     <style name="Theme.EtnowLegends" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="android:textViewStyle">@font/montserrat_regular</item>
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
