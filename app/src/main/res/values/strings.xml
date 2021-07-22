@@ -11,4 +11,16 @@
     <string name="login_failed">"Login failed"</string>
     <string name="image">image</string>
     <string name="button">button</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <style name="navigation_drawer_open">Open navigation drawer</style>
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="desc2">Para ahli sejarah menduga bahwa Candi Sanggrahan dibangun sebagai tempat peristirahatan rombongan pembawa jenazah pendeta wanita Budha kerajaan Majapahit bernama Gayatri yang bergelar Rajapadmi. Jenazah itu dibawa dari Kraton Majapahit untuk menjalani upacara pembakaran di sebuat tempat di sekitar Boyolangu. Belakangan abu jenazahnya disimpan di Candi Boyolangu. Dimungkinkan Candi Sanggrahan dibangun pada jaman Majapahit masa pemerintahan Raja Hayam Wuruk (1359-1389 M).</string>
+    <string name="petunjuk4">Menu <b>Legends Adventure!</b> adalah menu yang akan membawamu ke game edukasi mengenai bangun datar</string>
+    <string name="petunjuk3">Menu <b>Materi Bangun Datar</b> adalah menu yang akan membawamu ke materi Bangun Datar (Persegi, Persegi Panjang, Jajar Genjang, Trapesium, dan Belah Ketupat)</string>
+    <string name="petunjuk2">Menu <b>Sejarah Candi Sanggrahan</b> adalah menu yang akan membawamu ke materi Sejarah Candi Sanggrahan</string>
+    <string name="ketentuan_layanan"><b>Candi Sanggrahan</b> atau <b>Candi Cungkup</b> adalah candi pemujaan <b>Buddha</b>terletak di <b>Desa Sanggrahan, Kecamatan Boyolangu, Kabupaten Tulungagung, Jawa Timur</b>. Secara umum kompleks Candi Sanggrahan terdiri atas sebuah bangunan induk dan dua buah sisa bangunan kecil lainnya. Bangunan induk menggunakan batuan andesit dengan isian bata. Bangunan induk berukuran panjang 12,60 m, lebar 9,05 m, dan tinggi 5,86 m. Bangunan ini terdiri atas empat tingkat yang masing-masing berdenah bujursangkar dengan arah hadap ke barat.</string>
+    <string name="sub_materi_desc"><b>Bangun datar</b> merupakan bangun dua dimensi yang dibatasi oleh sebuah garis lurus atau lengkung. Beberapa bangun datar yaitu persegi dan persegi panjang.</string>
 </resources>

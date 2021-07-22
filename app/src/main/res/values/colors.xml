@@ -11,4 +11,17 @@
     <color name="secondary">#8EC0FD</color>
     <color name="green">#45BF55</color>
     <color name="yellow">#F8EA15</color>
+    <color name="btnTint">#444444</color>
+    <color name="yellow_muda">#FDFF8C</color>
+    <color name="ungu">#A3A7E4</color>
+    <color name="biru">#82DFE4</color>
+    <color name="hijau">#8FFAB5</color>
+    <color name="kuning_tua">#EFF15B</color>
+    <color name="ungu_tua">#6D70C6</color>
+    <color name="biru_tua">#49CDD4</color>
+    <color name="hijau_tua">#10F59F</color>
+    <color name="header_blue">#82DFE4</color>
+    <color name="darker_green">#044D29</color>
+    <color name="lock_color">#FFFDB7</color>
+    <color name="gray_et">#DADADA</color>
 </resources>
