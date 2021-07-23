@@ -5,41 +5,43 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.etnow.etnowlegends.R
-import com.etnow.etnowlegends.databinding.ActivityMateriBangunDatarBinding
+import com.etnow.etnowlegends.databinding.ActivityMateriPersegiPanjangBinding
 import com.etnow.etnowlegends.materi.persegi.PersegiActivity
+import com.etnow.etnowlegends.materi.persegi_panjang.PPActivity
 import com.etnow.etnowlegends.utils.BottomSheetFragmentPersegi
 
-class MateriBangunDatarActivity : AppCompatActivity() {
+class MateriPersegiPanjangActivity : AppCompatActivity() {
 
-    private var binding: ActivityMateriBangunDatarBinding? = null
+    private var binding: ActivityMateriPersegiPanjangBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMateriBangunDatarBinding.inflate(layoutInflater)
+        binding = ActivityMateriPersegiPanjangBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
         Glide
             .with(this)
-            .load(R.drawable.pc1)
+            .load(R.drawable.ppc1)
             .into(binding?.roundedImageView2!!)
 
         Glide
             .with(this)
-            .load(R.drawable.pc2)
+            .load(R.drawable.ppc2)
             .into(binding?.pc2!!)
 
         Glide
             .with(this)
-            .load(R.drawable.pc3)
+            .load(R.drawable.ppc3)
             .into(binding?.pc3!!)
 
         Glide
             .with(this)
-            .load(R.drawable.luas_rumus)
+            .load(R.drawable.luas_pp)
             .into(binding?.luasPersegi!!)
 
         Glide
             .with(this)
-            .load(R.drawable.keliling_persegi_rumus)
+            .load(R.drawable.kl_pp)
             .into(binding?.kelilingPersegi!!)
 
         binding?.back?.setOnClickListener {
@@ -54,9 +56,8 @@ class MateriBangunDatarActivity : AppCompatActivity() {
         }
 
         binding?.kerjakanBtn?.setOnClickListener {
-            startActivity(Intent(this, PersegiActivity::class.java))
+            startActivity(Intent(this, PPActivity::class.java))
         }
-
     }
 
     override fun onDestroy() {

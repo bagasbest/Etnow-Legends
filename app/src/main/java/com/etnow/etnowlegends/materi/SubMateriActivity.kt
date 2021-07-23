@@ -37,6 +37,14 @@ class SubMateriActivity : AppCompatActivity() {
             startActivity(Intent(this, MateriBangunDatarActivity::class.java))
         }
 
+        binding?.view8?.setOnClickListener {
+            startActivity(Intent(this, MateriPersegiPanjangActivity::class.java))
+        }
+
+        binding?.view10?.setOnClickListener {
+            startActivity(Intent(this, MateriSegitigaActivity::class.java))
+        }
+
     }
 
     override fun onDestroy() {

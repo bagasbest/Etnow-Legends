@@ -3,17 +3,16 @@ package com.etnow.etnowlegends.materi.persegi
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.etnow.etnowlegends.databinding.ActivityPersegiBinding
-import com.etnow.etnowlegends.utils.BottomSheetFragment
+import com.etnow.etnowlegends.databinding.ActivityPersegi3Binding
 import com.etnow.etnowlegends.utils.BottomSheetFragmentPersegi
 
-class PersegiActivity : AppCompatActivity() {
+class Persegi3Activity : AppCompatActivity() {
 
-    private var binding: ActivityPersegiBinding? = null
+    private var binding: ActivityPersegi3Binding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPersegiBinding.inflate(layoutInflater)
+        binding = ActivityPersegi3Binding.inflate(layoutInflater)
         setContentView(binding?.root)
 
         binding?.back?.setOnClickListener {
@@ -27,10 +26,9 @@ class PersegiActivity : AppCompatActivity() {
             }
         }
 
-        binding?.view18?.setOnClickListener {
-            startActivity(Intent(this, Persegi2Activity::class.java))
-        }
+        binding?.finish?.setOnClickListener {
 
+        }
     }
 
     override fun onDestroy() {

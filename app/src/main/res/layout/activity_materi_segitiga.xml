@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".materi.MateriBangunDatarActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".materi.MateriSegitigaActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Persegi"
+            android:text="Segitiga"
             android:textColor="@color/primary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/back" />
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:fontFamily="@font/poppins_extra_bold"
-            android:text="BANGUN DATAR PERSEGI"
+            android:text="BANGUN DATAR SEGITIGA"
             android:textColor="@color/btnTint"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Persegi merupakan bangun datar yang dibatasi oleh 4 sisi yang sama serta memiliki 4 sudut dengan besar yang sama."
+            android:text=" Segitiga merupakan bangun datar yang dibatasi dengan adanya tiga buah sisi serta memiliki tiga buah titik sudut."
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
@@ -82,7 +82,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/montserrat_extra_bold"
-            android:text="Perhatikan gambar permukaan atas candi dibawah ini."
+            android:text="Perhatikan gambar permukaan candi dibawah ini."
             android:textColor="@color/btnTint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +107,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Gambar di atas merupakan dinding bagian luar candi Sanggrahan yang membentuk suatu pola bangun datar persegi. Dari gambar di atas, maka di dapat pola persegi seperti di bawah ini:"
+            android:text="Perhatikan gambar di atas! Bagian tangga candi Sanggrahan tersusun dari batu membentuk bangun datar segitiga. Pola bangun datar yang di dapat sebagai berikut:"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/roundedImageView2" />
@@ -131,24 +131,11 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Persegi merupakan bangun datar yang dibatasi oleh 4 sisi yang sama serta memiliki 4 sudut dengan besar yang sama."
+            android:text="Dapat disimpulkan bahwa segitiga merupakan salah satu bangun datar yang dibatasi oleh tiga sisi. Dari pola bangun datar di atas, diketahui bahwa:"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pc2" />
 
-
-        <TextView
-            android:id="@+id/textView29"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:fontFamily="@font/poppins_regular"
-            android:text="Dari sini dapat di peroleh bahwa persegi memiliki:"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
         <Button
             android:id="@+id/kerjakanBtn"
@@ -164,7 +151,7 @@
             android:layout_marginBottom="50dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView34"
+            app:layout_constraintTop_toBottomOf="@+id/ss_mrg"
             tools:layout_editor_absoluteX="32dp" />
 
 
@@ -176,7 +163,7 @@
             android:layout_marginStart="17dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView29">
+            app:layout_constraintTop_toBottomOf="@+id/textView28">
 
             <TextView
                 android:id="@+id/bullet1"
@@ -195,38 +182,117 @@
                 android:layout_marginEnd="32dp"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
-                android:text="Sisi-sisi persegi ABCD sama panjang, yaitu:\nAB = BC = CD = AD" />
+                android:text="Jumlah ketiga sudut dalam segitiga = 180 detajat\n∠ABC + ∠BCA + ∠CAB = 180 derajat" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="fill_parent"
+        <TextView
+            android:id="@+id/jenis"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginStart="17dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Jenis - jenis segitiga:"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="1. Segitiga sama kaki"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jenis" />
+
+        <ImageView
+            android:id="@+id/sc3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+            app:layout_constraintTop_toBottomOf="@+id/judul" />
 
-            <TextView
-                android:id="@+id/bullet2"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_extra_bold"
-                android:gravity="right"
-                android:paddingRight="5dp"
-                android:text="2"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Segitiga sama kaki merupakan segitiga yang dua sisinya memiliki panjang yang sama."
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sc3" />
 
-            <TextView
-                android:id="@+id/bullet2Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Sudut-sudut persegi ABCD sama besar, yaitu:\nsudut ABC = sudut BCD = sudut CDA = sudut DAB = 90°." />
-        </LinearLayout>
+
+        <TextView
+            android:id="@+id/judul2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="2. Segitiga sama sisi"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desc" />
+
+        <ImageView
+            android:id="@+id/sc4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/judul2" />
+
+        <TextView
+            android:id="@+id/desc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Segitiga sama sisi merupakan segitiga yang ketiga buah sisinya sama panjang. Semua tiga sudut internal kongruen antara satu sama lain dan masing-masing 60°."
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sc4" />
+
+
+
+        <TextView
+            android:id="@+id/judul3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="3. Segitiga sembarang"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desc2" />
+
+        <ImageView
+            android:id="@+id/sc5"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.471"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/judul3" />
+
+        <TextView
+            android:id="@+id/desc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Segitiga sembarang adalah segitiga yang ketiga sisinya berbeda panjangnya dan ketiga sudutnya berbeda besarnya."
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sc5" />
+
+
 
         <TextView
             android:id="@+id/textView30"
@@ -236,10 +302,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Sifat-sifat yang di miliki persegi antara lain:"
+            android:text="Sifat-sifat segitiga:"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+            app:layout_constraintTop_toBottomOf="@+id/desc3" />
 
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -268,7 +334,7 @@
                 android:layout_marginEnd="32dp"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
-                android:text="Semua sisi persegi adalah sama panjang." />
+                android:text="Memiliki tiga buah sisi, berupa garis lurus yang saling bersentuhan satu sama lain." />
         </LinearLayout>
 
         <LinearLayout
@@ -298,7 +364,7 @@
                 android:layout_marginEnd="32dp"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
-                android:text="Sudut-sudut suatu persegi dibagi dua sama besar oleh diagonal-diagonalnya." />
+                android:text="Memiliki tiga sudut dengan jumlah seluruhnya sebesar 180 derajat." />
         </LinearLayout>
 
         <LinearLayout
@@ -328,7 +394,128 @@
                 android:layout_marginEnd="32dp"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
-                android:text="Diagonal-diagonal persegi saling berpotongan sama panjang membentuk sudut siku-siku." />
+                android:text="Diberi nama sesuai dengan nama ketiga titik sudutnya." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+            <TextView
+                android:id="@+id/bullet6"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:text="4"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bullet6Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingBottom="10dp"
+                android:text="Segitiga sama kaki dapat dibentuk dari dua segitiga siku-siku yang kongruen." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+            <TextView
+                android:id="@+id/bullet7"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:text="5"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bullet7Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingBottom="10dp"
+                android:text="Jumlah dua sisi dari suatu segitiga selalu lebih besar dari sisi ketiganya." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+            <TextView
+                android:id="@+id/bullet8"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:text="6"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bullet8Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingBottom="10dp"
+                android:text="Sisi terpanjang terletak didepan sudut terbesar." />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+            <TextView
+                android:id="@+id/bullet9"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:text="7"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bullet9Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingBottom="10dp"
+                android:text="Sisi terpendek terletak didepan sudut terkecil." />
         </LinearLayout>
 
 
@@ -339,7 +526,7 @@
             android:contentDescription="@string/image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
 
 
         <TextView
@@ -350,7 +537,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Untuk menentukan luas sebuah persegi, dapat menggunakan rumus:\nL = AB x BC\nL = s x s"
+            android:text="Untuk menentukan luas sebuah persegi panjang, dapat menggunakan rumus:\nL = DC x CB atau AB x DA"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pc3" />
@@ -372,12 +559,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Keterangan:\nL = Luas\ns = sisi"
+            android:text="Keterangan:\nL = Luas \na = alas\nt = tinggi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/luas_persegi" />
-
-
 
         <TextView
             android:id="@+id/textView33"
@@ -387,7 +572,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Untuk menentukan keliling sebuah persegi, dapat menggunakan rumus:\nK = AB + BC + CD + AD\nK = s + s + s + s"
+            android:text="Untuk menentukan keliling sebuah segitiga, dapat menggunakan rumus:\nK = AB + BC + DA"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView32" />
@@ -409,13 +594,35 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Keterangan:\nK = Keliling\ns = sisi"
+            android:text="Keterangan:\nK = Keliling"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/keliling_persegi" />
 
 
 
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Untuk menentukan panjang sisi miring pada segitiga siku-siku menggunakan teorima phytagoras:\nSisi miring2 = sisi tegak2 + sisi alas2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+        <ImageView
+            android:id="@+id/ss_mrg"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="32dp"
+            android:contentDescription="@string/image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </ScrollView>
+</ScrollView>

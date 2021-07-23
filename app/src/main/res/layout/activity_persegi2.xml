@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".materi.persegi.PersegiActivity">
+    tools:context=".materi.persegi.Persegi2Activity">
 
     <ImageButton
         android:id="@+id/back"
@@ -64,7 +64,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_view_full"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="@color/gray_et"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back" />
 
@@ -75,7 +75,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_view_full"
-        android:backgroundTint="@color/gray_et"
+        android:backgroundTint="@color/green"
         app:layout_constraintStart_toEndOf="@+id/view14"
         app:layout_constraintTop_toBottomOf="@+id/back" />
 
@@ -132,7 +132,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Sebuah lantai yang berbentuk persegi memiliki panjang sisi 12 cm. Maka luas lantai tersebut adalah … cm2"
+        android:text="Lima papan kayu persegi sama panjang berjejer dengan panjang sisi masing-masing 3 cm. Luas lima papan kayu tersebut yaitu … cm2"
         android:textColor="@color/btnTint"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -162,7 +162,7 @@
             android:importantForAutofill="no"
             android:inputType="text"
             android:paddingStart="10dp"
-            android:text="a. 100 cm2"
+            android:text="a. 9 cm2"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -181,7 +181,7 @@
             android:importantForAutofill="no"
             android:inputType="text"
             android:paddingStart="10dp"
-            android:text="b. 140 cm2"
+            android:text="b. 12 cm2"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -201,7 +201,7 @@
             android:importantForAutofill="no"
             android:inputType="text"
             android:paddingStart="10dp"
-            android:text="c. 144 cm2"
+            android:text="c. 24 cm2"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -220,7 +220,7 @@
             android:importantForAutofill="no"
             android:inputType="text"
             android:paddingStart="10dp"
-            android:text="d. 145 cm2"
+            android:text="d. 25 cm2"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -230,7 +230,6 @@
 
     </LinearLayout>
 
-
     <View
         android:id="@+id/view17"
         android:layout_width="40dp"
@@ -238,7 +237,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_view_full"
-        android:backgroundTint="@color/gray_et"
+        android:backgroundTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -276,16 +275,17 @@
         app:layout_constraintStart_toStartOf="@+id/view18"
         app:layout_constraintTop_toTopOf="@+id/view18" />
 
+
     <TextView
         android:id="@+id/textView35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Jawaban: C"
+        android:text="Jawaban: A"
         android:visibility="invisible"
-        android:textSize="18sp"
         android:layout_marginTop="10dp"
+        android:textSize="18sp"
         android:textColor="@color/btnTint"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -298,7 +298,7 @@
         android:layout_marginTop="16dp"
         android:visibility="invisible"
         android:fontFamily="@font/poppins_regular"
-        android:text="Pembahasan:\nLuas persegi = s x s\nLuas persegi = 12 x 12\nLuas persegi = 144 cm2"
+        android:text="Pembahasan:\nLuas persegi = s x s\nLuas persegi = 3 x 3\nLuas persegi = 9 cm2"
         android:textColor="@color/btnTint"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView35" />
