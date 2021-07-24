@@ -62,7 +62,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/rounded_view_full"
         android:backgroundTint="@color/gray_et"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +73,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/rounded_view_full"
         android:backgroundTint="@color/green"
         app:layout_constraintStart_toEndOf="@+id/view14"
@@ -83,7 +83,7 @@
         android:id="@+id/view16"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/rounded_view_full"
         android:layout_marginStart="16dp"
         android:backgroundTint="@color/gray_et"
@@ -129,7 +129,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/poppins_regular"
         android:text="Lima papan kayu persegi sama panjang berjejer dengan panjang sisi masing-masing 3 cm. Luas lima papan kayu tersebut yaitu … cm2"
@@ -141,6 +141,7 @@
 
 
     <LinearLayout
+        android:id="@+id/pilgan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -292,6 +293,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
     <TextView
+        android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

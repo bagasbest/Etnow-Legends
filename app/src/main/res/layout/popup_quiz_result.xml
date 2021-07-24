@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/popupQuantity"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="235dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/more_five"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout13"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout13"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout13" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginBottom="219dp"
+        android:backgroundTint="@color/green"
+        android:text="Level Selesai"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout13"
+        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="@+id/imageView10" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout13"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_view"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UselessParent">
+
+
+        <TextView
+            android:id="@+id/correct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Jawaban benar: "
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/wrong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Jawaban salah: "
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/pembahasan"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Lihat pembahasan"
+            android:backgroundTint="@color/green"
+            android:textAllCaps="false"
+            android:layout_marginBottom="40dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view19"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/rounded_view"
+        android:backgroundTint="@color/green"
+        android:elevation="3dp"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout13"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <ImageView
+        android:id="@+id/backToHome"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_home_24"
+        android:elevation="4dp"
+        android:contentDescription="@string/image"
+        app:layout_constraintBottom_toBottomOf="@+id/view19"
+        app:layout_constraintEnd_toEndOf="@+id/view19"
+        app:layout_constraintStart_toStartOf="@+id/view19"
+        app:layout_constraintTop_toTopOf="@+id/view19"
+        app:tint="@color/yellow" />
+
+
+    <View
+        android:id="@+id/view20"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_view"
+        android:backgroundTint="@color/green"
+        android:elevation="3dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="180dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout13"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <ImageView
+        android:id="@+id/download"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_download_24"
+        android:elevation="4dp"
+        android:contentDescription="@string/image"
+        app:layout_constraintBottom_toBottomOf="@+id/view20"
+        app:layout_constraintEnd_toEndOf="@+id/view20"
+        app:layout_constraintStart_toStartOf="@+id/view20"
+        app:layout_constraintTop_toTopOf="@+id/view20"
+        app:tint="@color/yellow" />
+
+
+    <View
+        android:id="@+id/view21"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_view"
+        android:backgroundTint="@color/green"
+        android:elevation="3dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout13"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout13"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_play_arrow_24"
+        android:elevation="4dp"
+        android:contentDescription="@string/image"
+        app:layout_constraintBottom_toBottomOf="@+id/view21"
+        app:layout_constraintEnd_toEndOf="@+id/view21"
+        app:layout_constraintStart_toStartOf="@+id/view21"
+        app:layout_constraintTop_toTopOf="@+id/view21"
+        app:tint="@color/yellow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

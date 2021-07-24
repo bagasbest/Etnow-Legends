@@ -3,6 +3,9 @@ package com.etnow.etnowlegends
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
@@ -13,10 +16,12 @@ import com.etnow.etnowlegends.databinding.ActivityHomeBinding
 import com.etnow.etnowlegends.drawer_content.AboutActivity
 import com.etnow.etnowlegends.drawer_content.KetentuanLayananActivity
 import com.etnow.etnowlegends.drawer_content.PetunjukUmumActivity
+import com.etnow.etnowlegends.drawer_content.SettingActivity
 import com.etnow.etnowlegends.legends_adventure.LegendsAdventureDashboardActivity
 import com.etnow.etnowlegends.materi.SubMateriActivity
 import com.etnow.etnowlegends.utils.BottomSheetFragment
 import com.google.android.material.navigation.NavigationView
+import java.util.*
 
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -82,9 +87,52 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         populateBottomSheetFragment()
         populateMenu()
+       // searchMenu()
 
         binding?.navView?.setNavigationItemSelectedListener(this)
 
+    }
+
+    private fun searchMenu() {
+        binding?.editText?.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                if(p0.toString().isEmpty()) {
+                    binding?.constraintLayout?.visibility = View.VISIBLE
+                    binding?.constraintLayout2?.visibility = View.VISIBLE
+                    binding?.constraintLayout3?.visibility = View.VISIBLE
+                    binding?.constraintLayout4?.visibility = View.VISIBLE
+                } else {
+
+                    val toLower = p0.toString().lowercase(Locale.getDefault())
+                    Log.d("tah", toLower)
+                    if("".contains(toLower)) {
+                        binding?.constraintLayout?.visibility = View.VISIBLE
+                    }
+                    if("sejarah dan informasi candi sanggrahan".contains(toLower)) {
+                        binding?.constraintLayout2?.visibility = View.VISIBLE
+                    }
+                    if("materi bangun datar".contains(toLower)) {
+                        binding?.constraintLayout3?.visibility = View.VISIBLE
+                    }
+                    if("legends adventure!".contains(toLower)) {
+                        binding?.constraintLayout4?.visibility = View.VISIBLE
+                    }
+                    else {
+                        binding?.constraintLayout?.visibility = View.GONE
+                        binding?.constraintLayout2?.visibility = View.GONE
+                        binding?.constraintLayout3?.visibility = View.GONE
+                        binding?.constraintLayout4?.visibility = View.GONE
+                    }
+                }
+            }
+
+        })
     }
 
     private fun populateMenu() {
@@ -147,7 +195,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(Intent(this, PetunjukUmumActivity::class.java))
             }
             R.id.nav_settings -> {
-
+                startActivity(Intent(this, SettingActivity::class.java))
             }
             R.id.nav_about_apps -> {
                 startActivity(Intent(this, AboutActivity::class.java))

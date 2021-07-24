@@ -97,6 +97,82 @@
                 tools:layout_editor_absoluteX="16dp" />
 
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+
+                <View
+                    android:id="@+id/kd_ki"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/rounded_view"
+                    android:backgroundTint="@color/yellow_muda"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="72dp" />
+
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/rounded_view2"
+                    android:backgroundTint="@color/kuning_tua"
+                    app:layout_constraintStart_toStartOf="@+id/kd_ki"
+                    app:layout_constraintTop_toTopOf="@+id/kd_ki" />
+
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="100dp"
+                    android:elevation="3dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/image"
+                    app:layout_constraintBottom_toBottomOf="@+id/kd_ki"
+                    app:layout_constraintStart_toStartOf="@+id/kd_ki"
+                    app:layout_constraintTop_toTopOf="@+id/kd_ki"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Kompetensi Dasar,\nKompetensi Inti dan\nIndikator"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/kd_ki"
+                    app:layout_constraintEnd_toEndOf="@+id/kd_ki"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/kd_ki"
+                    app:layout_constraintVertical_bias="0.311" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Serta Tujuan Pembelajaran"
+                    app:layout_constraintEnd_toEndOf="@+id/kd_ki"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
@@ -110,244 +186,232 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-
-            <View
-                android:id="@+id/kd_ki"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/rounded_view"
-                android:backgroundTint="@color/yellow_muda"
-                app:layout_constraintTop_toBottomOf="@+id/textView8"
-                tools:layout_editor_absoluteX="72dp" />
-
-            <View
-                android:id="@+id/candi"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/rounded_view"
-                android:backgroundTint="@color/ungu"
-                app:layout_constraintTop_toBottomOf="@+id/kd_ki"
-                tools:layout_editor_absoluteX="72dp" />
-
-            <View
-                android:id="@+id/bangunDatar"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/rounded_view"
-                android:backgroundTint="@color/biru"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/candi" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-            <View
-                android:id="@+id/legendsAdventure"
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:elevation="3dp"
+                    android:contentDescription="@string/image"
+                    app:layout_constraintBottom_toBottomOf="@+id/candi"
+                    app:layout_constraintStart_toStartOf="@+id/candi"
+                    app:layout_constraintTop_toTopOf="@+id/candi"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Sejarah dan informasi\nCandi Sanggrahan"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:elevation="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/candi"
+                    app:layout_constraintEnd_toEndOf="@+id/candi"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="@+id/candi"
+                    app:layout_constraintVertical_bias="0.311" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Pengantar dan Apresepsi"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <View
+                    android:id="@+id/candi"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/rounded_view"
+                    android:backgroundTint="@color/ungu"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:elevation="2dp"
+                    android:background="@drawable/rounded_view2"
+                    android:backgroundTint="@color/ungu_tua"
+                    app:layout_constraintStart_toStartOf="@+id/candi"
+                    app:layout_constraintTop_toTopOf="@+id/candi" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="50dp"
-                android:background="@drawable/rounded_view"
-                android:backgroundTint="@color/hijau"
+                android:layout_height="wrap_content"
+                android:id="@+id/constraintLayout3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Materi Bangun Datar"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/bangunDatar"
+                    app:layout_constraintEnd_toEndOf="@+id/bangunDatar"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                    app:layout_constraintTop_toTopOf="@+id/bangunDatar"
+                    app:layout_constraintVertical_bias="0.137" />
+
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/image"
+                    android:elevation="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/bangunDatar"
+                    app:layout_constraintStart_toStartOf="@+id/bangunDatar"
+                    app:layout_constraintTop_toTopOf="@+id/bangunDatar"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Persegi, Persegi Panjang,\nLingkaran, Trapesiun,\nBelah Ketupat"
+                    app:layout_constraintEnd_toEndOf="@+id/bangunDatar"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+                <View
+                    android:id="@+id/bangunDatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/rounded_view"
+                    android:backgroundTint="@color/biru"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/rounded_view2"
+                    android:backgroundTint="@color/biru_tua"
+                    app:layout_constraintStart_toStartOf="@+id/bangunDatar"
+                    app:layout_constraintTop_toTopOf="@+id/bangunDatar" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bangunDatar"
-                tools:layout_editor_absoluteX="72dp" />
+                android:layout_marginBottom="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Legends Adventure"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/legendsAdventure"
+                    app:layout_constraintEnd_toEndOf="@+id/legendsAdventure"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintTop_toTopOf="@+id/legendsAdventure"
+                    app:layout_constraintVertical_bias="0.1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Bermain sambil belajar lima\nmateri bangun datar yang\ntelah dipelajari sebelumnya"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
 
-            <View
-                android:id="@+id/view5"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/rounded_view2"
-                android:backgroundTint="@color/kuning_tua"
-                app:layout_constraintStart_toStartOf="@+id/kd_ki"
-                app:layout_constraintTop_toTopOf="@+id/kd_ki" />
-
-            <View
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/rounded_view2"
-                android:backgroundTint="@color/ungu_tua"
-                app:layout_constraintStart_toStartOf="@+id/candi"
-                app:layout_constraintTop_toTopOf="@+id/candi" />
-
-            <View
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/rounded_view2"
-                android:backgroundTint="@color/biru_tua"
-                app:layout_constraintStart_toStartOf="@+id/bangunDatar"
-                app:layout_constraintTop_toTopOf="@+id/bangunDatar" />
-
-            <View
-                android:id="@+id/view6"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/rounded_view2"
-                android:backgroundTint="@color/hijau_tua"
-                app:layout_constraintStart_toStartOf="@+id/legendsAdventure"
-                app:layout_constraintTop_toTopOf="@+id/legendsAdventure" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:contentDescription="@string/image"
-                app:layout_constraintBottom_toBottomOf="@+id/kd_ki"
-                app:layout_constraintStart_toStartOf="@+id/kd_ki"
-                app:layout_constraintTop_toTopOf="@+id/kd_ki"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:contentDescription="@string/image"
-                app:layout_constraintBottom_toBottomOf="@+id/candi"
-                app:layout_constraintStart_toStartOf="@+id/candi"
-                app:layout_constraintTop_toTopOf="@+id/candi"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:contentDescription="@string/image"
-                app:layout_constraintBottom_toBottomOf="@+id/bangunDatar"
-                app:layout_constraintStart_toStartOf="@+id/bangunDatar"
-                app:layout_constraintTop_toTopOf="@+id/bangunDatar"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:contentDescription="@string/image"
-                app:layout_constraintBottom_toBottomOf="@+id/legendsAdventure"
-                app:layout_constraintStart_toStartOf="@+id/legendsAdventure"
-                app:layout_constraintTop_toTopOf="@+id/legendsAdventure"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="Kompetensi Dasar,\nKompetensi Inti dan\nIndikator"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/kd_ki"
-                app:layout_constraintEnd_toEndOf="@+id/kd_ki"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toTopOf="@+id/kd_ki"
-                app:layout_constraintVertical_bias="0.311" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="Serta Tujuan Pembelajaran"
-                app:layout_constraintEnd_toEndOf="@+id/kd_ki"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/rounded_view2"
+                    android:backgroundTint="@color/hijau_tua"
+                    android:elevation="2dp"
+                    app:layout_constraintStart_toStartOf="@+id/legendsAdventure"
+                    app:layout_constraintTop_toTopOf="@+id/legendsAdventure" />
 
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="Sejarah dan informasi\nCandi Sanggrahan"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/candi"
-                app:layout_constraintEnd_toEndOf="@+id/candi"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toTopOf="@+id/candi"
-                app:layout_constraintVertical_bias="0.311" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="Pengantar dan Apresepsi"
-                app:layout_constraintEnd_toEndOf="@+id/kd_ki"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                <View
+                    android:id="@+id/legendsAdventure"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/rounded_view"
+                    android:backgroundTint="@color/hijau"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="72dp" />
 
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="Materi Bangun Datar"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/bangunDatar"
-                app:layout_constraintEnd_toEndOf="@+id/bangunDatar"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toTopOf="@+id/bangunDatar"
-                app:layout_constraintVertical_bias="0.137" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="Persegi, Persegi Panjang,\nLingkaran, Trapesiun,\nBelah Ketupat"
-                app:layout_constraintEnd_toEndOf="@+id/bangunDatar"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/image"
+                    android:elevation="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/legendsAdventure"
+                    app:layout_constraintStart_toStartOf="@+id/legendsAdventure"
+                    app:layout_constraintTop_toTopOf="@+id/legendsAdventure"
+                    app:layout_constraintVertical_bias="1.0" />
 
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="Legends Adventure"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/legendsAdventure"
-                app:layout_constraintEnd_toEndOf="@+id/legendsAdventure"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView6"
-                app:layout_constraintTop_toTopOf="@+id/legendsAdventure"
-                app:layout_constraintVertical_bias="0.1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="Bermain sambil belajar lima\nmateri bangun datar yang\ntelah dipelajari sebelumnya"
-                app:layout_constraintEnd_toEndOf="@+id/kd_ki"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

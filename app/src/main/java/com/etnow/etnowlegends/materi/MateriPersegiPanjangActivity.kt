@@ -56,7 +56,9 @@ class MateriPersegiPanjangActivity : AppCompatActivity() {
         }
 
         binding?.kerjakanBtn?.setOnClickListener {
-            startActivity(Intent(this, PPActivity::class.java))
+            val intent = Intent(this, PPActivity::class.java)
+            intent.putExtra(PPActivity.EXTRA_OPT, "kerjakan")
+            startActivity(intent)
         }
     }
 

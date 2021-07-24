@@ -7,6 +7,7 @@ import com.bumptech.glide.Glide
 import com.etnow.etnowlegends.R
 import com.etnow.etnowlegends.databinding.ActivityMateriSegitigaBinding
 import com.etnow.etnowlegends.materi.persegi_panjang.PPActivity
+import com.etnow.etnowlegends.materi.segitiga.SG1Activity
 import com.etnow.etnowlegends.utils.BottomSheetFragmentPersegi
 
 class MateriSegitigaActivity : AppCompatActivity() {
@@ -76,7 +77,9 @@ class MateriSegitigaActivity : AppCompatActivity() {
         }
 
         binding?.kerjakanBtn?.setOnClickListener {
-            startActivity(Intent(this, PPActivity::class.java))
+            val intent = Intent(this, SG1Activity::class.java)
+            intent.putExtra(SG1Activity.EXTRA_OPT, "kerjakan")
+            startActivity(intent)
         }
 
     }

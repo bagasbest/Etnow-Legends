@@ -1,4 +1,4 @@
-package com.etnow.etnowlegends.materi.persegi
+package com.etnow.etnowlegends.materi.persegi_panjang
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -8,42 +8,45 @@ import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.etnow.etnowlegends.HomeActivity
+import com.etnow.etnowlegends.OnboardingActivity
 import com.etnow.etnowlegends.R
-import com.etnow.etnowlegends.databinding.ActivityPersegiBinding
+import com.etnow.etnowlegends.databinding.ActivityPp3Binding
 import com.etnow.etnowlegends.databinding.PopupQuizResultBinding
 import com.etnow.etnowlegends.materi.MateriBangunDatarActivity
 import com.etnow.etnowlegends.materi.MateriPersegiPanjangActivity
-import com.etnow.etnowlegends.materi.persegi_panjang.PP2Activity
-import com.etnow.etnowlegends.materi.persegi_panjang.PPActivity
+import com.etnow.etnowlegends.materi.persegi.Persegi2Activity
+import com.etnow.etnowlegends.materi.persegi.Persegi3Activity
 import com.etnow.etnowlegends.utils.BottomSheetFragmentPersegi
 import java.util.concurrent.TimeUnit
 
-class PersegiActivity : AppCompatActivity() {
+class PP3Activity : AppCompatActivity() {
 
-    private var binding: ActivityPersegiBinding? = null
+    private var binding: ActivityPp3Binding? = null
     private var result: Int? = 0
     private var isPicked: Boolean? = false
     private var time: Long? = 0L
+    private var getTime: Long? = 0L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPersegiBinding.inflate(layoutInflater)
+        binding = ActivityPp3Binding.inflate(layoutInflater)
         setContentView(binding?.root)
 
         if(intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
-            countdownTimer()
+            result = intent.getIntExtra(RESULT, 0)
+            getTime = intent.getLongExtra(TIME, 0L)
+            countdownTimer(getTime!!)
             pickedChoice()
-        } else {
+        }
+        else {
             isPicked = true
             binding?.pilgan?.visibility = View.GONE
             binding?.textView35?.visibility = View.VISIBLE
             binding?.textView40?.visibility = View.VISIBLE
         }
-
 
 
         binding?.back?.setOnClickListener {
@@ -57,93 +60,24 @@ class PersegiActivity : AppCompatActivity() {
             }
         }
 
-        binding?.view18?.setOnClickListener {
+        binding?.finish?.setOnClickListener {
             if(isPicked == true) {
-                if(intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
-                    val intent = Intent(this, Persegi2Activity::class.java)
-                    intent.putExtra(Persegi2Activity.RESULT, result)
-                    intent.putExtra(Persegi2Activity.TIME, time)
-                    intent.putExtra(Persegi2Activity.EXTRA_OPT, "kerjakan")
-                    startActivity(intent)
-                }
-                else {
-                    val intent = Intent(this, Persegi2Activity::class.java)
-                    intent.putExtra(Persegi2Activity.EXTRA_OPT, "pembahasan")
-                    startActivity(intent)
-                }
+                showQuizResult()
             }
             else {
                 Toast.makeText(this, "Silahkan pilih jawaban kamu terlebih dahulu", Toast.LENGTH_SHORT).show()
             }
-
         }
-
-    }
-
-    private fun pickedChoice() {
-        binding?.a?.setOnClickListener {
-            result = 0
-            isPicked = true
-            binding?.a?.setBackgroundColor(resources.getColor(R.color.yellow))
-            binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
-        }
-
-        binding?.b?.setOnClickListener {
-            result = 0
-            isPicked = true
-            binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.b?.setBackgroundColor(resources.getColor(R.color.yellow))
-            binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
-        }
-
-        binding?.c?.setOnClickListener {
-            result = 1
-            isPicked = true
-            binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.c?.setBackgroundColor(resources.getColor(R.color.yellow))
-            binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
-        }
-
-        binding?.d?.setOnClickListener {
-            result = 0
-            isPicked = true
-            binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.d?.setBackgroundColor(resources.getColor(R.color.yellow))
-        }
-    }
-
-    private fun countdownTimer() {
-        countDownTimer.start()
-    }
-
-    private var countDownTimer = object : CountDownTimer(1000 * 300, 1000) {
-        override fun onTick(p0: Long) {
-            time = p0
-            binding?.textView37?.text = getString(R.string.formatted_time,
-            TimeUnit.MILLISECONDS.toMinutes(p0) % 60,
-            TimeUnit.MILLISECONDS.toSeconds(p0) % 60)
-        }
-
-        override fun onFinish() {
-            showPopupFinishQuiz()
-        }
-
     }
 
     @SuppressLint("SetTextI18n")
-    private fun showPopupFinishQuiz() {
+    private fun showQuizResult() {
         val binding: PopupQuizResultBinding = PopupQuizResultBinding.inflate(layoutInflater)
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
 
-        binding.correct.text = "Jawaban benar: $result"
-        binding.wrong.text = "Jawaban salah: ${3 - result!!}"
+        binding.correct.text = "Jawaban benar: " + result.toString()
+        binding.wrong.text = "Jawaban salah: " + (3 - result!!).toString()
 
         binding.view19.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
@@ -153,29 +87,88 @@ class PersegiActivity : AppCompatActivity() {
         }
 
         binding.view21.setOnClickListener {
-            val intent = Intent(this, MateriBangunDatarActivity::class.java)
+            val intent = Intent(this, MateriPersegiPanjangActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
         }
 
         binding.pembahasan.setOnClickListener {
-            val intent = Intent(this, PersegiActivity::class.java)
-            intent.putExtra(EXTRA_OPT, "pembahasan")
+            val intent = Intent(this, PPActivity::class.java)
+            intent.putExtra(PPActivity.EXTRA_OPT, "pembahasan")
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
+            finish()
         }
 
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
     }
 
+    private fun pickedChoice() {
+        binding?.a?.setOnClickListener {
+            result = result?.plus(1)
+            isPicked = true
+            binding?.a?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
+            binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
+            binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
+        }
+
+        binding?.b?.setOnClickListener {
+            result = result?.plus(0)
+            isPicked = true
+            binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
+            binding?.b?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
+            binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
+        }
+
+        binding?.c?.setOnClickListener {
+            result = result?.plus(0)
+            isPicked = true
+            binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
+            binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
+            binding?.c?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
+        }
+
+        binding?.d?.setOnClickListener {
+            result = result?.plus(0)
+            isPicked = true
+            binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
+            binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
+            binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
+            binding?.d?.setBackgroundColor(resources.getColor(R.color.yellow))
+        }
+    }
+
+
+    private fun countdownTimer(getTime: Long) {
+        object : CountDownTimer(getTime, 1000) {
+            override fun onTick(p0: Long) {
+                time = p0
+                binding?.textView37?.text = getString(
+                    R.string.formatted_time,
+                    TimeUnit.MILLISECONDS.toMinutes(p0) % 60,
+                    TimeUnit.MILLISECONDS.toSeconds(p0) % 60
+                )
+            }
+
+            override fun onFinish() {
+                showQuizResult()
+            }
+        }.start()
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         binding = null
-        countDownTimer.cancel()
     }
 
     companion object {
+        const val TIME = "time"
+        const val RESULT = "result"
         const val EXTRA_OPT = "opt"
     }
 }

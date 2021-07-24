@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".materi.persegi.PersegiActivity">
+    tools:context=".materi.segitiga.SG2Activity">
 
     <ImageButton
         android:id="@+id/back"
@@ -64,7 +64,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/rounded_view_full"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="@color/gray_et"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back" />
 
@@ -75,7 +75,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/rounded_view_full"
-        android:backgroundTint="@color/gray_et"
+        android:backgroundTint="@color/green"
         app:layout_constraintStart_toEndOf="@+id/view14"
         app:layout_constraintTop_toBottomOf="@+id/back" />
 
@@ -132,7 +132,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Sebuah lantai yang berbentuk persegi memiliki panjang sisi 12 cm. Maka luas lantai tersebut adalah … cm2"
+        android:text="Jika sebuah segitiga panjang alasnya 14 m dan tingginya 17 m, berapa luasnya?"
         android:textColor="@color/btnTint"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -163,7 +163,7 @@
             android:importantForAutofill="no"
             android:inputType="text"
             android:paddingStart="10dp"
-            android:text="a. 100 cm2"
+            android:text="a. 19 cm2"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -182,7 +182,7 @@
             android:importantForAutofill="no"
             android:inputType="text"
             android:paddingStart="10dp"
-            android:text="b. 140 cm2"
+            android:text="b. 119 cm2"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -202,7 +202,7 @@
             android:importantForAutofill="no"
             android:inputType="text"
             android:paddingStart="10dp"
-            android:text="c. 144 cm2"
+            android:text="c. 219 cm2"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -221,7 +221,7 @@
             android:importantForAutofill="no"
             android:inputType="text"
             android:paddingStart="10dp"
-            android:text="d. 145 cm2"
+            android:text="d. 319 cm2"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -239,7 +239,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_view_full"
-        android:backgroundTint="@color/gray_et"
+        android:backgroundTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -283,7 +283,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Jawaban: C"
+        android:text="Jawaban: B"
         android:visibility="invisible"
         android:textSize="18sp"
         android:layout_marginTop="10dp"
@@ -300,7 +300,7 @@
         android:layout_marginTop="16dp"
         android:visibility="invisible"
         android:fontFamily="@font/poppins_regular"
-        android:text="Pembahasan:\nLuas persegi = s x s\nLuas persegi = 12 x 12\nLuas persegi = 144 cm2"
+        android:text="Pembahasan:\nL = 1/2 x a x t\nL = 1/2 x 14 x 17\nL = 119 m²"
         android:textColor="@color/btnTint"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView35" />

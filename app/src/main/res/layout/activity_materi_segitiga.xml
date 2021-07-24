@@ -217,12 +217,14 @@
 
         <TextView
             android:id="@+id/desc"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Segitiga sama kaki merupakan segitiga yang dua sisinya memiliki panjang yang sama."
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sc3" />
 
@@ -249,12 +251,14 @@
 
         <TextView
             android:id="@+id/desc2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Segitiga sama sisi merupakan segitiga yang ketiga buah sisinya sama panjang. Semua tiga sudut internal kongruen antara satu sama lain dan masing-masing 60°."
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sc4" />
 
@@ -283,12 +287,14 @@
 
         <TextView
             android:id="@+id/desc3"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Segitiga sembarang adalah segitiga yang ketiga sisinya berbeda panjangnya dan ketiga sudutnya berbeda besarnya."
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sc5" />
 
@@ -544,8 +550,8 @@
 
         <ImageView
             android:id="@+id/luas_persegi"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
             android:layout_marginStart="32dp"
             android:contentDescription="@string/image"
             app:layout_constraintStart_toStartOf="parent"
@@ -579,8 +585,8 @@
 
         <ImageView
             android:id="@+id/keliling_persegi"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
             android:layout_marginStart="32dp"
             android:contentDescription="@string/image"
             app:layout_constraintStart_toStartOf="parent"
@@ -616,8 +622,8 @@
 
         <ImageView
             android:id="@+id/ss_mrg"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
             android:layout_marginStart="32dp"
             android:contentDescription="@string/image"
             app:layout_constraintStart_toStartOf="parent"
