@@ -11,6 +11,7 @@ import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.etnow.etnowlegends.HomeActivity
 import com.etnow.etnowlegends.R
 import com.etnow.etnowlegends.databinding.ActivityPersegiBinding
@@ -141,6 +142,18 @@ class PersegiActivity : AppCompatActivity() {
         val binding: PopupQuizResultBinding = PopupQuizResultBinding.inflate(layoutInflater)
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
+
+        if(result!! > 2) {
+            Glide
+                .with(this)
+                .load(R.drawable.more_five)
+                .into(binding.imageView10)
+        } else {
+            Glide
+                .with(this)
+                .load(R.drawable.less_five)
+                .into(binding.imageView10)
+        }
 
         binding.correct.text = "Jawaban benar: $result"
         binding.wrong.text = "Jawaban salah: ${3 - result!!}"
