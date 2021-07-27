@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.etnow.etnowlegends.R
@@ -32,6 +33,31 @@ class StupaActivity : AppCompatActivity() {
         val stupa2 = prefs.getBoolean("stupa2", false)
         val stupa3 = prefs.getBoolean("stupa3", false)
         val stupa4 = prefs.getBoolean("stupa4", false)
+
+        if(stupa2) {
+            binding?.button2?.background?.setTint(resources.getColor(R.color.green))
+            binding?.button2?.setTextColor(resources.getColor(R.color.white))
+            binding?.lockStupa2?.visibility = View.GONE
+        }
+        if(stupa3) {
+            binding?.button3?.background?.setTint(resources.getColor(R.color.green))
+            binding?.button3?.setTextColor(resources.getColor(R.color.white))
+            binding?.lockStupa3?.visibility = View.GONE
+
+        }
+        if(stupa4) {
+            binding?.button4?.background?.setTint(resources.getColor(R.color.green))
+            binding?.button4?.setTextColor(resources.getColor(R.color.white))
+            binding?.lockStupa4?.visibility = View.GONE
+
+            binding?.button7?.background?.setTint(resources.getColor(R.color.green))
+            binding?.button7?.setTextColor(resources.getColor(R.color.white))
+            binding?.lockStupa5?.visibility = View.GONE
+
+            binding?.button8?.background?.setTint(resources.getColor(R.color.green))
+            binding?.button8?.setTextColor(resources.getColor(R.color.white))
+            binding?.lockStupa6?.visibility = View.GONE
+        }
 
         binding?.bg?.let {
             Glide

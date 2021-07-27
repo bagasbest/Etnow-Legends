@@ -3,11 +3,14 @@ package com.etnow.etnowlegends.legends_adventure.stupa6
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.media.MediaPlayer
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -39,6 +42,9 @@ class Stupa6Activity : AppCompatActivity() {
     private var time: Long? = 0L
     private var option: String? = null
     private var answer: String? = null
+    private lateinit var prefs: SharedPreferences
+    private var mpSfx: MediaPlayer? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +56,9 @@ class Stupa6Activity : AppCompatActivity() {
 
         selectedPage()
 
-
+        prefs = getSharedPreferences(
+            "com.etnow.etnowlegends", Context.MODE_PRIVATE
+        )
 
 
         binding?.back?.setOnClickListener {
@@ -789,16 +797,21 @@ class Stupa6Activity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
 
+        val sfx = prefs.getBoolean("sfx", false)
+
         if (result!! > 5) {
             Glide
                 .with(this)
                 .load(R.drawable.more_five)
                 .into(binding.imageView10)
+            checkSfx(sfx, "win")
+
         } else {
             Glide
                 .with(this)
                 .load(R.drawable.less_five)
                 .into(binding.imageView10)
+            checkSfx(sfx, "lose")
         }
 
         binding.correct.text = "Jawaban benar: $result"
@@ -876,6 +889,31 @@ class Stupa6Activity : AppCompatActivity() {
 
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
+    }
+
+    private fun checkSfx(sfx: Boolean, hasil: String) {
+        if (sfx) {
+            mpSfx = if(hasil == "win") {
+                MediaPlayer.create(this, R.raw.win)
+            } else {
+                MediaPlayer.create(this, R.raw.lose)
+            }
+            mpSfx?.start()
+            mpSfx?.setOnCompletionListener {
+                onSongComplete()
+            }
+
+        }
+    }
+
+    private fun onSongComplete() {
+        mpSfx?.release()
+        mpSfx = null
+    }
+
+    override fun onStop() {
+        super.onStop()
+        onSongComplete()
     }
 
     override fun onDestroy() {

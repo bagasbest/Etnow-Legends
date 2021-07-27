@@ -10,6 +10,7 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.media.MediaPlayer
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -41,6 +42,7 @@ class Stupa1Activity : AppCompatActivity() {
     private var time: Long? = 0L
     private var option: String? = null
     private lateinit var prefs: SharedPreferences
+    private var mpSfx: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -226,7 +228,7 @@ class Stupa1Activity : AppCompatActivity() {
         binding?.a?.text = "a. Segitiga"
         binding?.b?.text = "b. Trapesium"
         binding?.c?.text = "c. Persegi"
-        binding?.d?.text = "d. Belah Ketupat"
+        binding?.d?.text = "d. Belah ketupat"
 
         binding?.view17?.background?.setTint(resources.getColor(R.color.gray_et))
         binding?.view18?.background?.setTint(resources.getColor(R.color.green))
@@ -312,8 +314,8 @@ class Stupa1Activity : AppCompatActivity() {
         binding?.button6?.text = "K.D. 3.2"
 
         binding?.a?.text = "a. Trapesium"
-        binding?.b?.text = "b. Jajar Genjang"
-        binding?.c?.text = "c. Persegi Panjang"
+        binding?.b?.text = "b. Jajar genjang"
+        binding?.c?.text = "c. Persegi panjang"
         binding?.d?.text = "d. Persegi"
 
         binding?.view17?.background?.setTint(resources.getColor(R.color.green))
@@ -398,7 +400,7 @@ class Stupa1Activity : AppCompatActivity() {
         binding?.a?.text = "a. Persegi"
         binding?.b?.text = "b. Segitiga"
         binding?.c?.text = "c. Trapesium"
-        binding?.d?.text = "d. Jajar Genjang"
+        binding?.d?.text = "d. Jajar genjang"
 
         binding?.view17?.background?.setTint(resources.getColor(R.color.green))
         binding?.view18?.background?.setTint(resources.getColor(R.color.green))
@@ -474,8 +476,8 @@ class Stupa1Activity : AppCompatActivity() {
         binding?.button6?.text = "K.D. 3.2"
 
         binding?.a?.text = "a. Siku - siku"
-        binding?.b?.text = "b. Sama Sissi"
-        binding?.c?.text = "c. Sama Kaki"
+        binding?.b?.text = "b. Sama sisi"
+        binding?.c?.text = "c. Sama kaki"
         binding?.d?.text = "d. Sembarang"
 
         binding?.view17?.background?.setTint(resources.getColor(R.color.green))
@@ -638,18 +640,22 @@ class Stupa1Activity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
 
+        val sfx = prefs.getBoolean("sfx", false)
+
         if (result!! > 5) {
             Glide
                 .with(this)
                 .load(R.drawable.more_five)
                 .into(binding.imageView10)
             prefs.edit().putBoolean("stupa2", true).apply()
+            checkSfx(sfx, "win")
 
         } else {
             Glide
                 .with(this)
                 .load(R.drawable.less_five)
                 .into(binding.imageView10)
+            checkSfx(sfx, "lose")
         }
 
         binding.correct.text = "Jawaban benar: $result"
@@ -726,6 +732,31 @@ class Stupa1Activity : AppCompatActivity() {
 
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
+    }
+
+    private fun checkSfx(sfx: Boolean, hasil: String) {
+        if (sfx) {
+            mpSfx = if(hasil == "win") {
+                MediaPlayer.create(this, R.raw.win)
+            } else {
+                MediaPlayer.create(this, R.raw.lose)
+            }
+            mpSfx?.start()
+            mpSfx?.setOnCompletionListener {
+                onSongComplete()
+            }
+
+        }
+    }
+
+    private fun onSongComplete() {
+        mpSfx?.release()
+        mpSfx = null
+    }
+
+    override fun onStop() {
+        super.onStop()
+        onSongComplete()
     }
 
     override fun onDestroy() {

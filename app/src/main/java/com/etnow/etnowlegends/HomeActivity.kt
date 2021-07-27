@@ -2,6 +2,9 @@ package com.etnow.etnowlegends
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -27,13 +30,26 @@ import java.util.*
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private var binding: ActivityHomeBinding? = null
+    private lateinit var prefs: SharedPreferences
+    private var mp: MediaPlayer? = null
+
+    override fun onResume() {
+        super.onResume()
+
+        val music = prefs.getBoolean("music", false)
+        if(music) {
+            mp = MediaPlayer.create(this, R.raw.sound)
+            mp?.isLooping = true
+            mp?.start()
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        val prefs = getSharedPreferences(
+        prefs = getSharedPreferences(
             "com.etnow.etnowlegends", Context.MODE_PRIVATE
         )
         val name = prefs.getString("key", "")
@@ -195,13 +211,15 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(Intent(this, PetunjukUmumActivity::class.java))
             }
             R.id.nav_settings -> {
-                startActivity(Intent(this, SettingActivity::class.java))
+                val intent = Intent(this, SettingActivity::class.java)
+                startActivity(intent)
             }
             R.id.nav_about_apps -> {
                 startActivity(Intent(this, AboutActivity::class.java))
             }
             R.id.nav_advice -> {
-
+                val saran = Intent(Intent.ACTION_VIEW, Uri.parse("bit.ly/feedbackel"))
+                startActivity(saran)
             }
             R.id.nav_faq -> {
                 startActivity(Intent(this, KetentuanLayananActivity::class.java))

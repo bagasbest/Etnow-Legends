@@ -2,9 +2,12 @@ package com.etnow.etnowlegends.materi.persegi
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -17,9 +20,6 @@ import com.etnow.etnowlegends.R
 import com.etnow.etnowlegends.databinding.ActivityPersegiBinding
 import com.etnow.etnowlegends.databinding.PopupQuizResultBinding
 import com.etnow.etnowlegends.materi.MateriBangunDatarActivity
-import com.etnow.etnowlegends.materi.MateriPersegiPanjangActivity
-import com.etnow.etnowlegends.materi.persegi_panjang.PP2Activity
-import com.etnow.etnowlegends.materi.persegi_panjang.PPActivity
 import com.etnow.etnowlegends.utils.BottomSheetFragmentPersegi
 import java.util.concurrent.TimeUnit
 
@@ -29,13 +29,15 @@ class PersegiActivity : AppCompatActivity() {
     private var result: Int? = 0
     private var isPicked: Boolean? = false
     private var time: Long? = 0L
+    private lateinit var prefs: SharedPreferences
+    private var mpSfx: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPersegiBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        if(intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
+        if (intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
             countdownTimer()
             pickedChoice()
         } else {
@@ -45,7 +47,9 @@ class PersegiActivity : AppCompatActivity() {
             binding?.textView40?.visibility = View.VISIBLE
         }
 
-
+        prefs = getSharedPreferences(
+            "com.etnow.etnowlegends", Context.MODE_PRIVATE
+        )
 
         binding?.back?.setOnClickListener {
             onBackPressed()
@@ -59,22 +63,24 @@ class PersegiActivity : AppCompatActivity() {
         }
 
         binding?.view18?.setOnClickListener {
-            if(isPicked == true) {
-                if(intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
+            if (isPicked == true) {
+                if (intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
                     val intent = Intent(this, Persegi2Activity::class.java)
                     intent.putExtra(Persegi2Activity.RESULT, result)
                     intent.putExtra(Persegi2Activity.TIME, time)
                     intent.putExtra(Persegi2Activity.EXTRA_OPT, "kerjakan")
                     startActivity(intent)
-                }
-                else {
+                } else {
                     val intent = Intent(this, Persegi2Activity::class.java)
                     intent.putExtra(Persegi2Activity.EXTRA_OPT, "pembahasan")
                     startActivity(intent)
                 }
-            }
-            else {
-                Toast.makeText(this, "Silahkan pilih jawaban kamu terlebih dahulu", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(
+                    this,
+                    "Silahkan pilih jawaban kamu terlebih dahulu",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
         }
@@ -126,9 +132,11 @@ class PersegiActivity : AppCompatActivity() {
     private var countDownTimer = object : CountDownTimer(1000 * 300, 1000) {
         override fun onTick(p0: Long) {
             time = p0
-            binding?.textView37?.text = getString(R.string.formatted_time,
-            TimeUnit.MILLISECONDS.toMinutes(p0) % 60,
-            TimeUnit.MILLISECONDS.toSeconds(p0) % 60)
+            binding?.textView37?.text = getString(
+                R.string.formatted_time,
+                TimeUnit.MILLISECONDS.toMinutes(p0) % 60,
+                TimeUnit.MILLISECONDS.toSeconds(p0) % 60
+            )
         }
 
         override fun onFinish() {
@@ -143,16 +151,20 @@ class PersegiActivity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
 
-        if(result!! > 2) {
+        val sfx = prefs.getBoolean("sfx", false)
+
+        if (result!! >= 2) {
             Glide
                 .with(this)
                 .load(R.drawable.more_five)
                 .into(binding.imageView10)
+            checkSfx(sfx, "win")
         } else {
             Glide
                 .with(this)
                 .load(R.drawable.less_five)
                 .into(binding.imageView10)
+            checkSfx(sfx, "lose")
         }
 
         binding.correct.text = "Jawaban benar: $result"
@@ -182,10 +194,34 @@ class PersegiActivity : AppCompatActivity() {
         dialog.show()
     }
 
+    private fun checkSfx(sfx: Boolean, hasil:String) {
+        if (sfx) {
+            mpSfx = if(hasil == "win") {
+                MediaPlayer.create(this, R.raw.win)
+            } else {
+                MediaPlayer.create(this, R.raw.lose)
+            }
+            mpSfx?.start()
+            mpSfx?.setOnCompletionListener {
+                onSongComplete()
+            }
+        }
+    }
+
+    private fun onSongComplete() {
+            mpSfx?.release()
+            mpSfx = null
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         binding = null
         countDownTimer.cancel()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        onSongComplete()
     }
 
     companion object {

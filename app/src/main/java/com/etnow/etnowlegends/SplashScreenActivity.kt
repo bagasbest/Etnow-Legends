@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.bumptech.glide.Glide
 import com.etnow.etnowlegends.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -15,6 +16,8 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding?.root)
+
+        binding?.logo?.let { Glide.with(this).load(R.drawable.baselogo).into(it) }
 
         loadSplashScreen()
 

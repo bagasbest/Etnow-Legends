@@ -3,11 +3,14 @@ package com.etnow.etnowlegends.materi.persegi
 import android.Manifest.permission.READ_EXTERNAL_STORAGE
 import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -18,6 +21,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.bumptech.glide.Glide
 import com.etnow.etnowlegends.HomeActivity
 import com.etnow.etnowlegends.R
 import com.etnow.etnowlegends.databinding.ActivityPersegi3Binding
@@ -36,7 +40,8 @@ class Persegi3Activity : AppCompatActivity() {
     private var isPicked: Boolean? = false
     private var time: Long? = 0L
     private var getTime: Long? = 0L
-
+    private lateinit var prefs: SharedPreferences
+    private var mpSfx: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +60,9 @@ class Persegi3Activity : AppCompatActivity() {
             binding?.textView40?.visibility = View.VISIBLE
         }
 
+        prefs = getSharedPreferences(
+            "com.etnow.etnowlegends", Context.MODE_PRIVATE
+        )
 
         binding?.back?.setOnClickListener {
             onBackPressed()
@@ -145,6 +153,22 @@ class Persegi3Activity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
 
+        val sfx = prefs.getBoolean("sfx", false)
+
+        if (result!! >= 2) {
+            Glide
+                .with(this)
+                .load(R.drawable.more_five)
+                .into(binding.imageView10)
+            checkSfx(sfx, "win")
+        } else {
+            Glide
+                .with(this)
+                .load(R.drawable.less_five)
+                .into(binding.imageView10)
+            checkSfx(sfx, "lose")
+        }
+
         binding.correct.text = "Jawaban benar: $result"
         binding.wrong.text = "Jawaban salah: ${3 - result!!}"
 
@@ -216,9 +240,34 @@ class Persegi3Activity : AppCompatActivity() {
         dialog.show()
     }
 
+    private fun checkSfx(sfx: Boolean, hasil: String) {
+        if (sfx) {
+            mpSfx = if(hasil == "win") {
+                MediaPlayer.create(this, R.raw.win)
+            } else {
+                MediaPlayer.create(this, R.raw.lose)
+            }
+            mpSfx?.start()
+            mpSfx?.setOnCompletionListener {
+                onSongComplete()
+            }
+
+        }
+    }
+
+    private fun onSongComplete() {
+            mpSfx?.release()
+            mpSfx = null
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         binding = null
+    }
+
+    override fun onStop() {
+        super.onStop()
+        onSongComplete()
     }
 
     companion object {

@@ -2,9 +2,12 @@ package com.etnow.etnowlegends.materi.persegi
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -30,27 +33,29 @@ class Persegi2Activity : AppCompatActivity() {
     private var isPicked: Boolean? = false
     private var time: Long? = 0L
     private var getTime: Long? = 0L
-
+    private lateinit var prefs: SharedPreferences
+    private var mpSfx: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPersegi2Binding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        if(intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
+        if (intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
             result = intent.getIntExtra(RESULT, 0)
             getTime = intent.getLongExtra(TIME, 0L)
             countdownTimer(getTime!!)
             pickedChoice()
-        }
-        else {
+        } else {
             isPicked = true
             binding?.pilgan?.visibility = View.GONE
             binding?.textView35?.visibility = View.VISIBLE
             binding?.textView40?.visibility = View.VISIBLE
         }
 
-
+        prefs = getSharedPreferences(
+            "com.etnow.etnowlegends", Context.MODE_PRIVATE
+        )
 
 
         binding?.back?.setOnClickListener {
@@ -65,22 +70,24 @@ class Persegi2Activity : AppCompatActivity() {
         }
 
         binding?.view18?.setOnClickListener {
-            if(isPicked == true) {
-                if(intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
+            if (isPicked == true) {
+                if (intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
                     val intent = Intent(this, Persegi3Activity::class.java)
                     intent.putExtra(Persegi3Activity.RESULT, result)
                     intent.putExtra(Persegi3Activity.TIME, time)
                     intent.putExtra(Persegi3Activity.EXTRA_OPT, "kerjakan")
                     startActivity(intent)
-                }
-                else{
+                } else {
                     val intent = Intent(this, Persegi3Activity::class.java)
                     intent.putExtra(Persegi3Activity.EXTRA_OPT, "pembahasan")
                     startActivity(intent)
                 }
-            }
-            else {
-                Toast.makeText(this, "Silahkan pilih jawaban kamu terlebih dahulu", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(
+                    this,
+                    "Silahkan pilih jawaban kamu terlebih dahulu",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
@@ -152,16 +159,20 @@ class Persegi2Activity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
 
-        if(result!! > 2) {
+        val sfx = prefs.getBoolean("sfx", false)
+
+        if (result!! >= 2) {
             Glide
                 .with(this)
                 .load(R.drawable.more_five)
                 .into(binding.imageView10)
+            checkSfx(sfx, "win")
         } else {
             Glide
                 .with(this)
                 .load(R.drawable.less_five)
                 .into(binding.imageView10)
+            checkSfx(sfx, "lose")
         }
 
         binding.correct.text = "Jawaban benar: $result"
@@ -191,9 +202,34 @@ class Persegi2Activity : AppCompatActivity() {
         dialog.show()
     }
 
+    private fun checkSfx(sfx: Boolean, hasil: String) {
+        if (sfx) {
+            mpSfx = if(hasil == "win") {
+                MediaPlayer.create(this, R.raw.win)
+            } else {
+                MediaPlayer.create(this, R.raw.lose)
+            }
+            mpSfx?.start()
+            mpSfx?.setOnCompletionListener {
+                onSongComplete()
+            }
+
+        }
+    }
+
+    private fun onSongComplete() {
+            mpSfx?.release()
+            mpSfx = null
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         binding = null
+    }
+
+    override fun onStop() {
+        super.onStop()
+        onSongComplete()
     }
 
     companion object {

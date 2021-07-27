@@ -63,7 +63,7 @@
             android:id="@+id/view3"
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView" />
