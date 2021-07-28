@@ -11,13 +11,10 @@ class KetentuanLayananActivity : AppCompatActivity() {
 
     private var binding: ActivityKetentuanLayananBinding? = null
 
-    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityKetentuanLayananBinding.inflate(layoutInflater)
         setContentView(binding?.root)
-
-        binding?.webview?.loadUrl("https://textuploader.com/tark3")
 
 
         binding?.imageButton2?.setOnClickListener {

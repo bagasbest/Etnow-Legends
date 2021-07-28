@@ -8,16 +8,14 @@
 
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:contentDescription="@string/image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -25,6 +23,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="ETNOW"
+        android:fontFamily="@font/poppins_extra_bold"
         android:textColor="@color/primary"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
@@ -37,7 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:text="Legends!"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/poppins_regular"
+        android:textStyle="bold"
         android:textColor="@color/primary"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"

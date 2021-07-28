@@ -9,12 +9,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/icon_resize"
+        android:icon="@drawable/iconapp"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EtnowLegends">
-        <activity android:name=".legends_adventure.stupa6.Stupa6Activity"></activity>
+        <activity android:name=".materi.MateriHintActivity"></activity>
+        <activity android:name=".legends_adventure.stupa6.Stupa6Activity" />
         <activity android:name=".legends_adventure.stupa5.Stupa5Activity" />
         <activity android:name=".legends_adventure.stupa4.Stupa4Activity" />
         <activity android:name=".legends_adventure.stupa3.Stupa3Activity" />

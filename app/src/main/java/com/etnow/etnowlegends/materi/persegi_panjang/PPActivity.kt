@@ -2,9 +2,12 @@ package com.etnow.etnowlegends.materi.persegi_panjang
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -28,6 +31,8 @@ class PPActivity : AppCompatActivity() {
     private var result: Int? = 0
     private var isPicked: Boolean? = false
     private var time: Long? = 0L
+    private lateinit var prefs: SharedPreferences
+    private var mpSfx: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,11 +47,17 @@ class PPActivity : AppCompatActivity() {
             binding?.pilgan?.visibility = View.GONE
             binding?.textView35?.visibility = View.VISIBLE
             binding?.textView40?.visibility = View.VISIBLE
+            binding?.textView36?.visibility = View.INVISIBLE
+            binding?.textView37?.visibility = View.INVISIBLE
         }
 
         binding?.back?.setOnClickListener {
             onBackPressed()
         }
+
+        prefs = getSharedPreferences(
+            "com.etnow.etnowlegends", Context.MODE_PRIVATE
+        )
 
         binding?.help?.setOnClickListener {
             val bottomSheetFragment = BottomSheetFragmentPersegi()
@@ -81,7 +92,7 @@ class PPActivity : AppCompatActivity() {
         binding?.a?.setOnClickListener {
             result = 0
             isPicked = true
-            binding?.a?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.a?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
@@ -91,7 +102,7 @@ class PPActivity : AppCompatActivity() {
             result = 0
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.b?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.b?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
         }
@@ -101,7 +112,7 @@ class PPActivity : AppCompatActivity() {
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.c?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.c?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
         }
 
@@ -111,7 +122,7 @@ class PPActivity : AppCompatActivity() {
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.d?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.d?.setBackgroundColor(resources.getColor(R.color.darker_green))
         }
     }
 
@@ -140,16 +151,25 @@ class PPActivity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
 
+        val sfx = prefs.getBoolean("sfx", false)
+        val name = prefs.getString("key", "")
+        val school = prefs.getString("school", "")
+
+        binding.name.text = "Nama: $name"
+        binding.school.text = "Sekolah: $school"
+
         if(result!! > 2) {
             Glide
                 .with(this)
                 .load(R.drawable.more_five)
                 .into(binding.imageView10)
+            checkSfx(sfx, "win")
         } else {
             Glide
                 .with(this)
                 .load(R.drawable.less_five)
                 .into(binding.imageView10)
+            checkSfx(sfx, "win")
         }
 
         binding.correct.text = "Jawaban benar: $result"
@@ -164,7 +184,6 @@ class PPActivity : AppCompatActivity() {
 
         binding.view21.setOnClickListener {
             val intent = Intent(this, MateriPersegiPanjangActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
         }
@@ -179,6 +198,31 @@ class PPActivity : AppCompatActivity() {
 
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
+    }
+
+    private fun checkSfx(sfx: Boolean, hasil: String) {
+        if (sfx) {
+            mpSfx = if(hasil == "win") {
+                MediaPlayer.create(this, R.raw.win)
+            } else {
+                MediaPlayer.create(this, R.raw.lose)
+            }
+            mpSfx?.start()
+            mpSfx?.setOnCompletionListener {
+                onSongComplete()
+            }
+
+        }
+    }
+
+    private fun onSongComplete() {
+        mpSfx?.release()
+        mpSfx = null
+    }
+
+    override fun onStop() {
+        super.onStop()
+        onSongComplete()
     }
 
     override fun onDestroy() {

@@ -23,7 +23,7 @@
         android:layout_marginTop="16dp"
         android:textSize="18sp"
         android:layout_marginStart="16dp"
-        android:fontFamily="@font/montserrat_extra_bold" />
+        android:fontFamily="@font/poppins_extra_bold" />
 
     <TextView
         android:id="@+id/className"
@@ -32,7 +32,7 @@
         android:textColor="@color/btnTint"
         android:maxLines="1"
         android:layout_marginStart="16dp"
-        android:fontFamily="@font/montserrat_regular" />
+        android:fontFamily="@font/poppins_regular" />
 
 
     <TextView
@@ -43,7 +43,7 @@
         android:layout_marginBottom="20dp"
         android:maxLines="1"
         android:layout_marginStart="16dp"
-        android:fontFamily="@font/montserrat_regular" />
+        android:fontFamily="@font/poppins_regular" />
 
 
 </LinearLayout>

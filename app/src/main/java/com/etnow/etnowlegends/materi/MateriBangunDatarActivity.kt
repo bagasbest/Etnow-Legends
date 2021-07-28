@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
+import com.etnow.etnowlegends.HomeActivity
 import com.etnow.etnowlegends.R
 import com.etnow.etnowlegends.databinding.ActivityMateriBangunDatarBinding
 import com.etnow.etnowlegends.materi.persegi.PersegiActivity
@@ -44,7 +45,10 @@ class MateriBangunDatarActivity : AppCompatActivity() {
             .into(binding?.kelilingPersegi!!)
 
         binding?.back?.setOnClickListener {
-            onBackPressed()
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            finish()
         }
 
         binding?.help?.setOnClickListener {
@@ -55,8 +59,8 @@ class MateriBangunDatarActivity : AppCompatActivity() {
         }
 
         binding?.kerjakanBtn?.setOnClickListener {
-            val intent = Intent(this, PersegiActivity::class.java)
-            intent.putExtra(PersegiActivity.EXTRA_OPT, "kerjakan")
+            val intent = Intent(this, MateriHintActivity::class.java)
+            intent.putExtra(MateriHintActivity.EXTRA_TYPE, "persegi")
             startActivity(intent)
         }
 

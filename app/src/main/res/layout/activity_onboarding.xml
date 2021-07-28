@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/poppins_regular"
         android:text="Karya Mahasiswa"
         android:textColor="@color/secondary"
         android:textSize="18sp"
@@ -32,7 +32,6 @@
         app:iss_delay="0"
         app:iss_error_image="@drawable/logo_universitas"
         app:iss_period="1000"
-        app:iss_placeholder="@drawable/logo_universitas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -43,7 +42,7 @@
         android:layout_height="50dp"
         android:background="@drawable/rounded_btn"
         android:backgroundTint="@color/primary"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/poppins_regular"
         android:text="Masuk Disini"
         android:textStyle="bold"
         android:layout_marginTop="30dp"
@@ -65,7 +64,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/poppins_regular"
         android:text="Masuk Disini"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -96,11 +95,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_regular"
+            android:fontFamily="@font/poppins_regular"
             android:text="Perlu bantuan ?"
             android:textColor="@color/black" />
 
         <TextView
+            android:id="@+id/petunjuk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"

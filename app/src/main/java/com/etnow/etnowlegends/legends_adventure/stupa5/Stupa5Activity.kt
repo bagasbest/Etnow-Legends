@@ -155,6 +155,8 @@ class Stupa5Activity : AppCompatActivity() {
             binding?.pilgan?.visibility = View.GONE
             binding?.textView35?.visibility = View.VISIBLE
             binding?.textView40?.visibility = View.VISIBLE
+            binding?.textView36?.visibility = View.INVISIBLE
+            binding?.textView37?.visibility = View.INVISIBLE
         }
     }
 
@@ -724,7 +726,7 @@ class Stupa5Activity : AppCompatActivity() {
         binding?.a?.setOnClickListener {
             validator = "a"
             isPicked = true
-            binding?.a?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.a?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
@@ -734,7 +736,7 @@ class Stupa5Activity : AppCompatActivity() {
             validator = "b"
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.b?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.b?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
         }
@@ -744,7 +746,7 @@ class Stupa5Activity : AppCompatActivity() {
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.c?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.c?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
         }
 
@@ -754,7 +756,7 @@ class Stupa5Activity : AppCompatActivity() {
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.d?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.d?.setBackgroundColor(resources.getColor(R.color.darker_green))
         }
     }
 
@@ -785,6 +787,11 @@ class Stupa5Activity : AppCompatActivity() {
         dialog.setContentView(binding.root)
 
         val sfx = prefs.getBoolean("sfx", false)
+        val name = prefs.getString("key", "")
+        val school = prefs.getString("school", "")
+
+        binding.name.text = "Nama: $name"
+        binding.school.text = "Sekolah: $school"
 
         if (result!! > 5) {
             Glide
@@ -813,7 +820,6 @@ class Stupa5Activity : AppCompatActivity() {
 
         binding.view21.setOnClickListener {
             val intent = Intent(this, StupaActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
         }

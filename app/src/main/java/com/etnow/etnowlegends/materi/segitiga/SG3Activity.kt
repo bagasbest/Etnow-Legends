@@ -50,16 +50,20 @@ class SG3Activity : AppCompatActivity() {
 
 
         if(intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
+            binding?.finish?.text = "Pembahasan"
             result = intent.getIntExtra(RESULT, 0)
             getTime = intent.getLongExtra(TIME, 0L)
             countdownTimer(getTime!!)
             pickedChoice()
         }
         else {
+            binding?.finish?.text = "Selesai"
             isPicked = true
             binding?.pilgan?.visibility = View.GONE
             binding?.textView35?.visibility = View.VISIBLE
             binding?.textView40?.visibility = View.VISIBLE
+            binding?.textView36?.visibility = View.INVISIBLE
+            binding?.textView37?.visibility = View.INVISIBLE
         }
 
         prefs = getSharedPreferences(
@@ -80,7 +84,17 @@ class SG3Activity : AppCompatActivity() {
 
         binding?.finish?.setOnClickListener {
             if(isPicked == true) {
-                showQuizResult()
+                //showQuizResult()
+                if(intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
+                    val intent = Intent(this, SG1Activity::class.java)
+                    intent.putExtra(SG1Activity.EXTRA_OPT, "pembahasan")
+                    startActivity(intent)
+                }
+                else {
+                    val intent = Intent(this, MateriSegitigaActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
             }
             else {
                 Toast.makeText(this, "Silahkan pilih jawaban kamu terlebih dahulu", Toast.LENGTH_SHORT).show()
@@ -127,7 +141,6 @@ class SG3Activity : AppCompatActivity() {
 
         binding.view21.setOnClickListener {
             val intent = Intent(this, MateriSegitigaActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
         }
@@ -193,7 +206,7 @@ class SG3Activity : AppCompatActivity() {
         binding?.a?.setOnClickListener {
             result = result?.plus(0)
             isPicked = true
-            binding?.a?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.a?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
@@ -203,7 +216,7 @@ class SG3Activity : AppCompatActivity() {
             result = result?.plus(0)
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.b?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.b?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
         }
@@ -213,7 +226,7 @@ class SG3Activity : AppCompatActivity() {
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.c?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.c?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
         }
 
@@ -223,7 +236,7 @@ class SG3Activity : AppCompatActivity() {
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.d?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.d?.setBackgroundColor(resources.getColor(R.color.darker_green))
         }
     }
 

@@ -21,6 +21,7 @@ import com.etnow.etnowlegends.drawer_content.KetentuanLayananActivity
 import com.etnow.etnowlegends.drawer_content.PetunjukUmumActivity
 import com.etnow.etnowlegends.drawer_content.SettingActivity
 import com.etnow.etnowlegends.legends_adventure.LegendsAdventureDashboardActivity
+import com.etnow.etnowlegends.legends_adventure.StupaActivity
 import com.etnow.etnowlegends.materi.SubMateriActivity
 import com.etnow.etnowlegends.utils.BottomSheetFragment
 import com.google.android.material.navigation.NavigationView
@@ -76,28 +77,28 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding?.imageView5?.let {
             Glide
                 .with(this)
-                .load(R.drawable.materi_kd_ki_i)
+                .load(R.drawable.ki_kd_i)
                 .into(it)
         }
 
         binding?.imageView6?.let {
             Glide
                 .with(this)
-                .load(R.drawable.materi_candi)
+                .load(R.drawable.sejarah_candi)
                 .into(it)
         }
 
         binding?.imageView7?.let {
             Glide
                 .with(this)
-                .load(R.drawable.materi_bangun_datar)
+                .load(R.drawable.bangun_datar)
                 .into(it)
         }
 
         binding?.imageView8?.let {
             Glide
                 .with(this)
-                .load(R.drawable.legends_adventure)
+                .load(R.drawable.legends_adv)
                 .into(it)
         }
 
@@ -165,7 +166,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         binding?.legendsAdventure?.setOnClickListener {
-            startActivity(Intent(this, LegendsAdventureDashboardActivity::class.java))
+            startActivity(Intent(this, StupaActivity::class.java))
         }
 
     }
@@ -218,7 +219,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(Intent(this, AboutActivity::class.java))
             }
             R.id.nav_advice -> {
-                val saran = Intent(Intent.ACTION_VIEW, Uri.parse("bit.ly/feedbackel"))
+                val saran = Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSckS9OhBpK3XmzSRlGm-Fel1jeCJOVQkS8tLsFcKPmmNLdz-A/viewform"))
                 startActivity(saran)
             }
             R.id.nav_faq -> {

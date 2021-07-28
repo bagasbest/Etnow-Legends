@@ -50,6 +50,8 @@ class SG2Activity : AppCompatActivity() {
             binding?.pilgan?.visibility = View.GONE
             binding?.textView35?.visibility = View.VISIBLE
             binding?.textView40?.visibility = View.VISIBLE
+            binding?.textView36?.visibility = View.INVISIBLE
+            binding?.textView37?.visibility = View.INVISIBLE
         }
         prefs = getSharedPreferences(
             "com.etnow.etnowlegends", Context.MODE_PRIVATE
@@ -98,7 +100,7 @@ class SG2Activity : AppCompatActivity() {
         binding?.a?.setOnClickListener {
             result = result?.plus(0)
             isPicked = true
-            binding?.a?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.a?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
@@ -108,7 +110,7 @@ class SG2Activity : AppCompatActivity() {
             result = result?.plus(1)
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.b?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.b?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
         }
@@ -118,7 +120,7 @@ class SG2Activity : AppCompatActivity() {
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.c?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.c?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
         }
 
@@ -128,7 +130,7 @@ class SG2Activity : AppCompatActivity() {
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.d?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.d?.setBackgroundColor(resources.getColor(R.color.darker_green))
         }
     }
 
@@ -183,7 +185,6 @@ class SG2Activity : AppCompatActivity() {
 
         binding.view21.setOnClickListener {
             val intent = Intent(this, MateriSegitigaActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
         }

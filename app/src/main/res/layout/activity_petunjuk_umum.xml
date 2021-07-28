@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".drawer_content.PetunjukUmumActivity"
-    tools:ignore="ScrollViewCount">
+    tools:context=".drawer_content.PetunjukUmumActivity">
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:background="@null"
             android:contentDescription="@string/button"
@@ -22,30 +23,1604 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/btnTint" />
 
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="Petunjuk Umum Penggunaan\nAplikasi Etnow Legends"
+                android:textAlignment="center"
+                android:textColor="@color/btnTint"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bullet7"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_extra_bold"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="-"
+                        android:textStyle="bold" />
+
+                <com.codesgood.views.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="untuk dapat menggunakan aplikasi ini kamu diharuskan mengisi data diri seperti Nama, Kelas, dan Nama Sekolah"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/poppins_regular" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pada menu utama kamu akan diberikan 4 menu yang tiap menunya memiliki materi/fungsi masing-masing yaitu:"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_extra_bold"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="--"
+                        android:textStyle="bold" />
+
+                <com.codesgood.views.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kompetensi Dasar atau Kompetensi Inti atau Indikator: pada menu ini kamu dapat membaca Kompetensi Dasar/Kompetensi Inti/Indikator serta tujuan pembelajaran."
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/poppins_regular" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="--"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sejarah dan informasi Candi Sanggrahan: pada menu ini kamu dapat membaca mengenai informasi dan sejarah mengenai Candi Sanggrahan."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="--"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Materi Bangun Datar: pada menu ini kamu dapat mempelajari bangun datar persegi, persegi panjang, dan segitiga beserta mengerjakan soal pengayaannya."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="--"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Legends Adventure: pada menu ini kamu bisa mengerjakan tantangan-tantangan dalam bentuk soal matematika yang pastinya dapat meningkatkan pemahaman kamu mengenai materi bangun datar"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="setelah kamu membaca materi bangun datar, jangan lupa untuk mengerjakan soal pengayaan"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jika kamu mengerjakan Stupa Legends Adventure atas perintah gurumu, jangan lupa untuk screenshoot / simpan hasil nilai kamu ya!"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" jika kamu ingin mematikan musik dan sound effect, kamu bisa atur di pengaturan"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" jika kamu memiliki saran untuk aplikasi ini agar lebih baik silahkan kirimkan saran kamu di menu ''Beri Saran''"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
         <TextView
-            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:text="=================================" />
+
+
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins_extra_bold"
-            android:text="Petunjuk Umum Penggunaan\nAplikasi Etnow Legends"
-            android:textAlignment="center"
+            android:text="Petunjuk Onboarding\nPetunjuk"
             android:textSize="18sp"
-            android:layout_gravity="center"
-            android:textColor="@color/btnTint"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-        <WebView
-            android:id="@+id/webview"
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Untuk dapat menggunakan aplikasi silahkan klik ''Masuk Disini''"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kamu akan diarahkan ke halaman untuk memasukan data diri seperti Nama, Kelas, dan Nama Sekolah"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Setelah itu klik ''Masuk''"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selamat! kamu sudah dapat menggunakan aplikasi Etnow Legend!"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:text="=================================" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petunjuk Homescreen\nPetunjuk"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pada menu ini, silahkan pilih menu yang akan kamu gunakan"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="disini ada 4 menu yaitu:"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="--"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kompetensi Dasar/Kompetensi Inti/Indikator: pada menu ini kamu dapat membaca Kompetensi Dasar/Kompetensi Inti/Indikator serta tujuan pembelajaran"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="--"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sejarah dan informasi Candi Sanggrahan: pada menu ini kamu dapat membaca mengenai informasi dan sejarah mengenai Candi Sanggrahan"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="--"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Materi Bangun Datar: pada menu ini kamu dapat mempelajari bangun datar persegi, persegi panjang, dan segitiga beserta mengerjakan soal pengayaannya"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="--"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Legends Adventure: pada menu ini kamu bisa mengerjakan tantangan-tantangan dalam bentuk soal matematika yang pastinya dapat meningkatkan pemahaman kamu mengenai materi bangun datar"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="tombol Sidebar (garis tiga) dapat kamu gunakan untuk melihat petunjuk umum penggunaan aplikasi, pengaturan aplikasi, tentang aplikasi, memberi saran aplikasi, membaca syarat dan ketentuan layanan, serta keluar dari aplikasi"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:text="=================================" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petunjuk Materi KI/KD/Sejarah Candi:\nPetunjuk"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jangan lupa berdoa sebelum belajar"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="silahkan membaca materi yang tersedia"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" jika kamu telah selesai membaca materi, kamu dapat kembali ke menu utama"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:text="=================================" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petunjuk Materi Bangun datar:\nPetunjuk"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Silahkan pilih bangun datar yang ingin kamu pelajari"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:text="=================================" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petunjuk Materi Bangun datar (masuk per materi):\nPetunjuk"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" silahkan berdoa sebelum belajar"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" silahkan membaca materi bangun datar ini"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jika kamu telah selesai membaca materi bangun datar ini, selanjutnya kamu harus mengerjakan pengayaan sebagai langkah penguatan materi"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" setelah mengerjakan pengayaan, kamu akan diarahkan ke halaman pembahasan pengayaan"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:text="=================================" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petunjuk pengerjaan soal pengayaan:\nPetunjuk"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
+            android:text="Jumlah soal = 3\nwaktu pengerjaan = 5 menit\npetunjuk tambahan:" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="latihan soal pengayaan berguna untuk menguatkan materi yang telah kamu pelajari"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" kerjakan dengan baik dan sungguh-sungguh!"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="kamu dapat melompati soal dengan menekan nomor soal (ada di atas)"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="harap selalu perhatikan siswa waktu mengerjakan"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jawaban isian singkat hanya cukup masukan ANGKA saja"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jika merasa sudah selesai dan waktu masih berjalan, silahkan periksa kembali soal dengan jawabannya"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jika ingin menyelesaikan soal, silahkan klik selesai"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="soal akan selesai otomatis apabila siswa waktu sudah habis"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:text="=================================" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petunjuk pengerjaan soal Stupa:\nPetunjuk"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
+            android:text="Jumlah soal = 10\nwaktu pengerjaan = 10 menit\npetunjuk tambahan:" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="latihan soal pengayaan berguna untuk menguatkan materi yang telah kamu pelajari"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" kerjakan dengan baik dan sungguh-sungguh!"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jika kamu mengerjakan Stupa ini karena perintah gurumu, jangan lupa screenshoot atau simpan nilai kamu ya!"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="kamu dapat melompati soal dengan menekan nomor soal (ada di atas)"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="harap selalu perhatikan siswa waktu mengerjakan"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jawaban isian singkat hanya cukup masukan ANGKA saja"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jika merasa sudah selesai dan waktu masih berjalan, silahkan periksa kembali soal dengan jawabannya"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jika ingin menyelesaikan soal, silahkan klik selesai"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="soal akan selesai otomatis apabila siswa waktu sudah habis"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:text="=================================" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petunjuk saat mengerjakan soal:\nPetunjuk"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="kamu dapat melompati soal dengan menekan nomor soal (ada di atas)"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="harap selalu perhatikan siswa waktu mengerjakan"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jawaban isian singkat hanya cukup masukan ANGKA saja"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jika merasa sudah selesai dan waktu masih berjalan, silahkan periksa kembali soal dengan jawabannya"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jika ingin menyelesaikan soal, silahkan klik selesai"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="soal akan selesai otomatis apabila siswa waktu sudah habis"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:text="=================================" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petunjuk Pembahasan pengayaan:\nPetunjuk"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="silahkan pelajari pembahasan ini agar kamu makin jago dalam bab bangun datar"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:text="=================================" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petunjuk Pembahasan Stupa:\nPetunjuk"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="silahkan pelajari pembahasan ini agar kamu makin jago dalam bab bangun datar"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="kamu dapat eksport gambar sebagai gambar untuk menyimpan nilai kamu"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="kamu dapat membagikan gambar hasil nilai kamu ke guru kelasmu"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -81,14 +81,16 @@
                 android:text="1"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet1Text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Menerima dan menjalankan agama yang dianutnya" />
+                android:layout_marginBottom="10dp"
+                android:text="Menerima dan menjalankan agama yang dianutnya"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -110,14 +112,16 @@
                 android:text="2"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet2Text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Menunjukkan perilaku jujur, disiplin, tanggung jawab, santun, peduli, dan percaya diri dalam berinteraksi dengan keluarga, teman, guru, dan tetangga" />
+                android:layout_marginBottom="10dp"
+                android:text="Menunjukkan perilaku jujur, disiplin, tanggung jawab, santun, peduli, dan percaya diri dalam berinteraksi dengan keluarga, teman, guru, dan tetangga"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
         </LinearLayout>
 
 
@@ -140,14 +144,16 @@
                 android:text="3"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet3text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Memahami pengetahuan faktual dengan cara mengamati, mendengar, melihat, membaca dan menanya berdasarkan rasa ingin tahu tentang dirinya, makhluk ciptaan Tuhan dan kegiatannya, dan benda-benda yang dijumpainya di rumah dan di sekolah." />
+                android:layout_marginBottom="10dp"
+                android:text="Memahami pengetahuan faktual dengan cara mengamati, mendengar, melihat, membaca dan menanya berdasarkan rasa ingin tahu tentang dirinya, makhluk ciptaan Tuhan dan kegiatannya, dan benda-benda yang dijumpainya di rumah dan di sekolah."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -166,17 +172,19 @@
                 android:fontFamily="@font/poppins_extra_bold"
                 android:gravity="right"
                 android:paddingRight="5dp"
-                android:text="3"
+                android:text="4"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet4text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Menyajikan pengetahuan faktual dalam bahasa yang jelas, sistematik, dan logis dalam karya estetis, dalam gerakan yang mencerminkan anak sehat dan dalam tindakan yang mencerminkan perilaku anak beriman dan berakhlak mulia." />
+                android:layout_marginBottom="10dp"
+                android:text="Menyajikan pengetahuan faktual dalam bahasa yang jelas, sistematik, dan logis dalam karya estetis, dalam gerakan yang mencerminkan anak sehat dan dalam tindakan yang mencerminkan perilaku anak beriman dan berakhlak mulia."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
         </LinearLayout>
 
         <TextView
@@ -208,18 +216,20 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_extra_bold"
                 android:gravity="right"
-                android:paddingRight="5dp"
                 android:text="3.2"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet5text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Menjelaskan keliling dan luas persegi, persegi panjang, dan segitiga, serta hubungan pangkat dua dengan akar" />
+                android:layout_marginBottom="10dp"
+                android:text="Menjelaskan keliling dan luas persegi, persegi panjang, dan segitiga, serta hubungan pangkat dua dengan akar"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -236,19 +246,21 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_extra_bold"
-                android:gravity="right"
-                android:paddingRight="5dp"
+                android:gravity="end"
                 android:text="4.2"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet6text"
-                android:layout_width="wrap_content"
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Menyelesaikan masalah berkaitan dengan keliling dan luas persegi, persegi panjang, dan segitiga termasuk melibatkan pangkat dua dengan akar pangkat dua." />
+                android:layout_marginBottom="10dp"
+                android:text="Menyelesaikan masalah berkaitan dengan keliling dan luas persegi, persegi panjang, dan segitiga termasuk melibatkan pangkat dua dengan akar pangkat dua."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
         </LinearLayout>
 
 
@@ -281,18 +293,22 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_extra_bold"
                 android:gravity="right"
+                android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
                 android:text="3.2.1"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet7text"
-                android:layout_width="wrap_content"
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Siswa mampu mengidentifikasi karakteristik bangun datar persegi" />
+                android:layout_marginBottom="10dp"
+                android:text="Siswa mampu mengidentifikasi karakteristik bangun datar persegi"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -310,18 +326,23 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_extra_bold"
                 android:gravity="right"
+                android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
                 android:text="3.2.2"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet8text"
-                android:layout_width="wrap_content"
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Siswa mampu menganalisis karakteristik bangun datar persegi panjang" />
+                android:layout_marginBottom="10dp"
+                android:text="Siswa mampu menganalisis karakteristik bangun datar persegi panjang"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -339,18 +360,21 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_extra_bold"
                 android:gravity="right"
+                android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
                 android:text="3.2.3"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet9text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Siswa mampu menentukan karakteristik bangun datar segitiga" />
+                android:layout_marginBottom="10dp"
+                android:text="Siswa mampu menentukan karakteristik bangun datar segitiga"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -370,16 +394,20 @@
                 android:gravity="right"
                 android:layout_marginEnd="5dp"
                 android:text="4.2.1"
+                android:layout_marginStart="5dp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet10text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Siswa mampu mengimplementasikan luas dan keliling bangun datar persegi pada penyelesaian masalah." />
+                android:layout_marginBottom="10dp"
+                android:text="Siswa mampu mengimplementasikan luas dan keliling bangun datar persegi pada penyelesaian masalah."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
+
         </LinearLayout>
 
 
@@ -398,18 +426,22 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_extra_bold"
                 android:gravity="right"
+                android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
                 android:text="4.2.2"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet11text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Siswa mampu mengimplementasikan luas dan keliling bangun datar persegi pada penyelesaian masalah." />
+                android:layout_marginBottom="10dp"
+                android:text="Siswa mampu mengimplementasikan luas dan keliling bangun datar persegi pada penyelesaian masalah."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -429,16 +461,19 @@
                 android:gravity="right"
                 android:layout_marginEnd="5dp"
                 android:text="4.2.3"
+                android:layout_marginStart="5dp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet12text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Siswa mampu mengimplementasikan luas dan keliling bangun datar segitiga pada penyelesaian masalah." />
+                android:layout_marginBottom="10dp"
+                android:text="Siswa mampu mengimplementasikan luas dan keliling bangun datar segitiga pada penyelesaian masalah."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
         </LinearLayout>
 
         <Button

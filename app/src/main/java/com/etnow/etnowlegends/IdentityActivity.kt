@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.etnow.etnowlegends.databinding.ActivityIdentityBinding
+import com.etnow.etnowlegends.utils.BottomSheetFragmentOnboarding
 
 
 class IdentityActivity : AppCompatActivity() {
@@ -31,6 +32,11 @@ class IdentityActivity : AppCompatActivity() {
         // KEMBALI
         binding?.imageButton?.setOnClickListener {
             onBackPressed()
+        }
+
+        binding?.petunjuk?.setOnClickListener {
+            val bottomSheetFragment = BottomSheetFragmentOnboarding()
+            bottomSheetFragment.show(supportFragmentManager, "ButtonSheetDialog")
         }
 
     }

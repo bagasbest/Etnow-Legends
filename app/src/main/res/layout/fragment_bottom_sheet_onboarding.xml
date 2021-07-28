@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,6 @@
             android:textColor="@color/btnTint"
             android:textSize="18sp" />
 
-
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="fill_parent"
@@ -54,7 +53,7 @@
                 android:fontFamily="@font/poppins_extra_bold"
                 android:gravity="right"
                 android:paddingRight="10dp"
-                android:text="-"
+                android:text="\u2022"
                 android:textStyle="bold" />
 
             <TextView
@@ -65,47 +64,14 @@
                 android:layout_marginEnd="32dp"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
-                android:text="Pada menu ini, silahkan pilih menu yang akan kamu gunakan" />
+                android:text="Untuk dapat menggunakan aplikasi silahkan klik ''Masuk Disini''" />
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout7"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="32dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView69">
-
-            <TextView
-                android:id="@+id/bullet7"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_extra_bold"
-                android:gravity="right"
-                android:paddingRight="10dp"
-                android:text="-"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/bullet7Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Disini ada 4 menu, yaitu:" />
-        </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/linearLayout3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="10dp"
             android:layout_marginEnd="32dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -119,7 +85,7 @@
                 android:fontFamily="@font/poppins_extra_bold"
                 android:gravity="right"
                 android:paddingRight="10dp"
-                android:text="--"
+                android:text="\u2022"
                 android:textStyle="bold" />
 
             <TextView
@@ -130,7 +96,7 @@
                 android:layout_marginEnd="32dp"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
-                android:text="Kompetensi Dasar/Kompetensi Inti/Indikator: pada menu ini kamu dapat membaca Kompetensi Dasar/Kompetensi Inti/Indikator serta tujuan pembelajaran" />
+                android:text="Kamu akan diarahkan ke halaman untuk memasukan data diri seperti Nama, Kelas, dan Nama Sekolah" />
         </LinearLayout>
 
 
@@ -138,7 +104,7 @@
             android:id="@+id/linearLayout4"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="10dp"
             android:layout_marginEnd="32dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -152,7 +118,7 @@
                 android:fontFamily="@font/poppins_extra_bold"
                 android:gravity="right"
                 android:paddingRight="10dp"
-                android:text="--"
+                android:text="\u2022"
                 android:textStyle="bold" />
 
             <TextView
@@ -163,14 +129,14 @@
                 android:layout_marginEnd="32dp"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
-                android:text="Sejarah dan informasi Candi Sanggrahan: pada menu ini kamu dapat membaca mengenai informasi dan sejarah mengenai Candi Sanggrahan" />
+                android:text="Setelah itu klik ''Masuk''" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout5"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="10dp"
             android:layout_marginEnd="32dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -184,7 +150,7 @@
                 android:fontFamily="@font/poppins_extra_bold"
                 android:gravity="right"
                 android:paddingRight="10dp"
-                android:text="--"
+                android:text="\u2022"
                 android:textStyle="bold" />
 
             <TextView
@@ -195,74 +161,10 @@
                 android:layout_marginEnd="32dp"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
-                android:text="Materi Bangun Datar: pada menu ini kamu dapat mempelajari bangun datar persegi, persegi panjang, dan segitiga beserta mengerjakan soal pengayaannya" />
+                android:text="Selamat! kamu sudah dapat menggunakan aplikasi Etnow Legend!" />
         </LinearLayout>
 
-
-        <LinearLayout
-            android:id="@+id/linearLayout8"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView69">
-
-            <TextView
-                android:id="@+id/bullet8"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_extra_bold"
-                android:gravity="right"
-                android:paddingRight="10dp"
-                android:text="--"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/bullet8Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Legends Adventure: pada menu ini kamu bisa mengerjakan tantangan-tantangan dalam bentuk soal matematika yang pastinya dapat meningkatkan pemahaman kamu mengenai materi bangun datar" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout10"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="32dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView69">
-
-            <TextView
-                android:id="@+id/bullet10"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_extra_bold"
-                android:gravity="right"
-                android:paddingRight="10dp"
-                android:text="-"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/bullet10Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="tombol Sidebar (garis tiga) dapat kamu gunakan untuk melihat petunjuk umum penggunaan aplikasi, pengaturan aplikasi, tentang aplikasi, memberi saran aplikasi, membaca syarat dan ketentuan layanan, serta keluar dari aplikasi" />
-        </LinearLayout>
 
     </LinearLayout>
 
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

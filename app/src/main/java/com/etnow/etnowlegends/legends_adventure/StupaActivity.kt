@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.bumptech.glide.Glide
+import com.etnow.etnowlegends.HomeActivity
 import com.etnow.etnowlegends.R
 import com.etnow.etnowlegends.databinding.ActivityStupaBinding
 import com.etnow.etnowlegends.legends_adventure.stupa1.Stupa1Activity
@@ -69,25 +70,28 @@ class StupaActivity : AppCompatActivity() {
         binding?.view12?.let {
             Glide
                 .with(this)
-                .load(R.drawable.legends_adventure)
+                .load(R.drawable.legends_adv)
                 .into(it)
         }
 
         binding?.back?.setOnClickListener {
-            onBackPressed()
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            finish()
         }
 
 
         binding?.button?.setOnClickListener {
-            val intent = Intent(this, Stupa1Activity::class.java)
-            intent.putExtra(Stupa1Activity.EXTRA_OPT, "kerjakan")
+            val intent = Intent(this, LegendsAdventureDashboardActivity::class.java)
+            intent.putExtra(LegendsAdventureDashboardActivity.EXTRA_STUPA, "stupa1")
             startActivity(intent)
         }
 
         binding?.button2?.setOnClickListener {
             if(stupa2) {
-                val intent = Intent(this, Stupa2Activity::class.java)
-                intent.putExtra(Stupa2Activity.EXTRA_OPT, "kerjakan")
+                val intent = Intent(this, LegendsAdventureDashboardActivity::class.java)
+                intent.putExtra(LegendsAdventureDashboardActivity.EXTRA_STUPA, "stupa2")
                 startActivity(intent)
             }
             else {
@@ -97,8 +101,8 @@ class StupaActivity : AppCompatActivity() {
 
         binding?.button3?.setOnClickListener {
             if(stupa3) {
-                val intent = Intent(this, Stupa3Activity::class.java)
-                intent.putExtra(Stupa3Activity.EXTRA_OPT, "kerjakan")
+                val intent = Intent(this, LegendsAdventureDashboardActivity::class.java)
+                intent.putExtra(LegendsAdventureDashboardActivity.EXTRA_STUPA, "stupa3")
                 startActivity(intent)
             }
             else {
@@ -109,8 +113,8 @@ class StupaActivity : AppCompatActivity() {
 
         binding?.button4?.setOnClickListener {
             if(stupa4) {
-                val intent = Intent(this, Stupa4Activity::class.java)
-                intent.putExtra(Stupa4Activity.EXTRA_OPT, "kerjakan")
+                val intent = Intent(this, LegendsAdventureDashboardActivity::class.java)
+                intent.putExtra(LegendsAdventureDashboardActivity.EXTRA_STUPA, "stupa4")
                 startActivity(intent)
             }
             else {
@@ -121,8 +125,8 @@ class StupaActivity : AppCompatActivity() {
 
         binding?.button7?.setOnClickListener {
             if(stupa4) {
-                val intent = Intent(this, Stupa5Activity::class.java)
-                intent.putExtra(Stupa5Activity.EXTRA_OPT, "kerjakan")
+                val intent = Intent(this, LegendsAdventureDashboardActivity::class.java)
+                intent.putExtra(LegendsAdventureDashboardActivity.EXTRA_STUPA, "stupa5")
                 startActivity(intent)
             }
             else {
@@ -132,8 +136,8 @@ class StupaActivity : AppCompatActivity() {
 
         binding?.button8?.setOnClickListener {
             if(stupa4) {
-                val intent = Intent(this, Stupa6Activity::class.java)
-                intent.putExtra(Stupa6Activity.EXTRA_OPT, "kerjakan")
+                val intent = Intent(this, LegendsAdventureDashboardActivity::class.java)
+                intent.putExtra(LegendsAdventureDashboardActivity.EXTRA_STUPA, "stupa6")
                 startActivity(intent)
             }
             else {

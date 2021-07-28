@@ -1,45 +1,1682 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".drawer_content.KetentuanLayananActivity">
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@null"
-        android:contentDescription="@string/button"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/btnTint" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/poppins_extra_bold"
-        android:text="Ketentuan Layanan"
-        android:textSize="18sp"
-        android:textColor="@color/btnTint"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
-
-    <WebView
-        android:id="@+id/webview"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:contentDescription="@string/button"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/btnTint" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_extra_bold"
+            android:text="Ketentuan Layanan"
+            android:textColor="@color/btnTint"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Dengan mengakses atau menggunakan Platform kami, Anda dengan ini menyatakan dan menjamin kepada kami bahwa Anda memenuhi syarat berdasarkan hukum untuk menjadi Pengguna, yakni salah satu di antara hal berikut:"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="(i)"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Anda tidak berusia dibawah 10 (sepuluh) tahun;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="(ii)"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Anda telah mendapatkan persetujuan dari orang tua atau wali yang sah (sebagaimana relevan) apabila Anda berusia di bawah 10 (sepuluh)  tahun atau berada di bawah pengampuan dan penggunaan tersebut telah dibuat atau disetujui oleh orang tua atau wali Anda yang sah;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Anda mengakui bahwa kami tidak memiliki kewajiban untuk memastikan bahwa Anda memenuhi syarat tersebut di atas. Hal tersebut akan menjadi tanggung jawab Anda sepenuhnya untuk memastikan bahwa Anda memenuhi kualifikasi yang disyaratkan."
+            android:textColor="@color/black" />
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Telah dijelaskan bahwa EtnoW Legend tidak akan bertanggung jawab atas setiap konsekuensi yang mungkin muncul sebagai akibat dari penyalahgunaan Platform kami atau penggunaan jasa kami yang mungkin terjadi karena seseorang termasuk orang yang tidak memenuhi syarat yang disebutkan di atas yang mendaftar untuk menggunakan Platform atau jasa kami. apabila Pengguna tidak memenuhi persyaratan tersebut, maka tindakan Pengguna untuk mendaftar, mengakses, menggunakan atau melakukan tindakan lain dalam Platform kami akan dianggap berada dalam pengawasan dan persetujuan sah dari orang tua atau wali Pengguna. Orang tua atau wali yang telah memberikan persetujuan atau dianggap telah memberikan persetujuan (sebagaimana disebutkan sebelumnya) kepada Pengguna di bawah 10 (sepuluh) tahun atau di bawah pengampuan (sebagaimana relevan) akan sepenuhnya bertanggung jawab atas seluruh aktivitas dari Pengguna dalam menggunakan dan mengakses Platform atau jasa kami."
+            android:textColor="@color/black" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Anda menyatakan dan menjamin bahwa dengan mendaftar dan/atau menggunakan Platform kami dianggap telah membaca, memahami, dan menyetujui seluruh ketentuan dan konten dalam Syarat dan Ketentuan ini beserta perubahan/revisi oleh EtnoW Legend dari waktu ke waktu."
+            android:textColor="@color/black" />
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="JIKA PENGGUNA TIDAK SETUJU DENGAN SYARAT DAN KETENTUAN INI, MAKA PENGGUNA TIDAK DAPAT MELANJUTKAN UNTUK MENGAKSES DAN MENGGUNAKAN PLATFORM/JASA/KONTEN EtnoW Legend."
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="1"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mendaftarkan Akun"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Sebelum menggunakan Platform, Pengguna menyetujui Syarat dan Ketentuan ini serta Kebijakan Privasi secara keseluruhan dan mendaftarkan dirinya dengan menyediakan informasi yang kami butuhkan dan mengkonfirmasi kesehatan mental Pengguna. Saat mendaftar, kami akan meminta Pengguna untuk memberikan nama lengkap, alamat email atau  nomor telepon pribadi Pengguna (termasuk data-data dari orang tua atau wali yang sah, apabila Pengguna berusia di bawah 10 (sepuluh) tahun). Kami juga dapat menghentikan penggunaan Platform jika di masa mendatang data yang Pengguna berikan kepada kami terbukti tidak benar."
+            android:textColor="@color/black" />
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Kami akan menganggap setiap penggunaan atau perintah yang dilakukan melalui Akun Pengguna sebagai permintaan yang sah dari Pengguna. Harap segera memberitahukan kami jika Pengguna mengetahui atau mencurigai bahwa Akun Pengguna telah digunakan tanpa sepengetahuan dan persetujuan Pengguna. Kami akan mengambil tindakan yang kami anggap perlu dan dapat dilakukan terhadap penggunaan tanpa persetujuan tersebut."
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="2"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Data Pribadi Pengguna"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Pengumpulan, penyimpanan, pemrosesan, penggunaan dan pembagian data pribadi Pengguna, seperti nama, alamat email dan nomor telepon pribadi Pengguna yang diberikan saat Pengguna membuka Akun akan tunduk pada Syarat dan Ketentuan ini."
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="3"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Akses terhadap Platform"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Kami tidak menjamin bahwa Platform kami, atau konten di dalamya, akan selalu tersedia atau tidak terganggu. Anda juga setuju untuk mengambil segala tindakan yang wajar untuk menghentikan penggunaan yang tidak sah dan untuk bekerja sama dengan kami dalam setiap investigasi terhadap penggunaan yang tidak sah atau pelanggaran tersebut. Kami tidak akan dalam kondisi apapun dimintakan pertanggung jawaban atau bertanggung jawab atas klaim apapun sehubungan dengan penggunaan atau penyalahgunaan Akun Anda karena perbuatan pihak ketiga mana pun atau karena kesalahan Anda untuk menjaga kerahasiaan, kontrol atau keamanan atas akses atau Akun Anda, produk atau sistem yang digunakan untuk memanfaatkan Layanan kami. Kualitas Siaran: Resolusi dan kualitas dari konten edukasi yang Anda terima akan bergantung pada berbagai faktor, termasuk jenis dari perangkat yang sesuai dimana Anda mengakses Platform/konten dan kemampuan internet Anda, dimana dapat meningkat atau menurun selama Anda melihat atau menggunakan Platform kami. Ketika kami berusaha untuk menyediakan pengalaman menonton berkualitas tinggi kepada Anda, kami tidak menjamin resolusi atau kualitas konten dalam Platform kami yang akan anda terima ketika melakukan siaran atau terlihat pada perangkat Anda."
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="4"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Penggunaan yang Dilarang"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Platform kami hanya dapat digunakan oleh Pengguna untuk hal-hal yang dibenarkan menurut hukum dan dibenarkan berdasarkan Syarat dan Ketentuan ini. Tidak terbatas pada hal-hal berikut, penggunaan Platform kami oleh Pengguna untuk hal-hal sebagai berikut adalah tidak dibenarkan:"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="a."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Dengan cara-cara yang melanggar hukum dan peraturan lokal, nasional, maupun internasional yang berlaku;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="b"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Dengan cara-cara yang melanggar hukum atau menipu, atau memiliki tujuan atau dampak yang melanggar hukum atau menipu;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="c."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Untuk tujuan membahayakan atau mencoba mencelakakan anak di bawah umur (termasuk namun tidak terbatas pada setiap tutor, siswa dan perwakilan yang terkait dalam kapasitas apapun dengan EtnoW Legend dengan cara apa pun;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="d."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mengirim, menerima, mengunggah, menyalin, menjiplak, mengunduh (termasuk tangkapan layar atau rekaman layar), mengubah, menunjukkan penggunaan, atau menggunakan kembali materi yang tidak sesuai dengan standar konten kami, Syarat dan Ketentuan dan/atau peraturan yang berlaku;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="e."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menyebarkan, membagikan, menampilkan atau mengirimkan materi iklan atau promosi yang tidak diinginkan atau tidak sah dan bentuk permintaan serupa lainnya (seperti spam)."
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="f."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Meneruskan data, mengirim atau mengunggah materi yang mengandung virus, trojan, worm, logic bomb, keystroke loggers, spyware, adware, maupun program berbahaya lainnya atau kode komputer sejenis yang dirancang untuk memberikan efek merugikan terhadap pengoperasian perangkat lunak atau perangkat keras atau Platform dalam bentuk apa pun."
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Pengguna dengan ini setuju untuk:"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="a."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Tidak, baik secara langsung maupun tidak langsung, membuat kembali, menggandakan, menyalin, mengubah, menampilkan, membagikan, atau menjual kembali bagian mana pun dari Platform kami (termasuk setiap konten/setiap yang terkandung/setiap yang diakses pada Platform) yang bertentangan dengan ketentuan dalam Syarat dan Ketentuan Platform kami."
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="b."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Untuk tidak mengakses tanpa izin, mengganggu, merusak, atau mengacak-acak: bagian mana pun dari Platform kami; peralatan atau jaringan di mana Platform kami tersimpan perangkat lunak apa pun yang digunakan dalam penyediaan Platform kami; atau peralatan atau jaringan atau perangkat lunak yang dimiliki oleh pihak ketiga mana pun."
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="c."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Pengunduhan dalam Aplikasi: Anda hanya diberikan lisensi untuk melakukan pengunduhan dalam aplikasi atas konten edukasi dalam aplikasi seluler atau pada perangkat yang sesuai sebagaimana diizinkan. Penampilan atas layar atau pengunduhan pada perangkat lainnya atau dengan cara apapun tidak dibenarkan oleh karenanya akan berakibat pada pengakhiran segera langganan bersamaan dengan pengakhiran akses atas seluruh konten edukasi yang telah diunduh dengan hak untuk melakukan tindakan hukum yang sesuai, atas kebijakan tunggal kami."
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="5"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Kebijakan Keselamatan Anak"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Kebijakan ini berlaku untuk setiap orang, organisasi yang terkait dengan kami, termasuk:"
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="a."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Organisasi atau orang dalam organisasi tersebut, yang mungkin bermitra dan/atau bekerja dengan EtnoW Legend dalam kapasitas apapun, termasuk untuk periode atau pekerjaan yang terbatas; "
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="b"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Relawan yang mungkin bekerja dengan EtnoW Legend dalam kapasitas apapun, termasuk untuk periode yang terbatas; "
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="c."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Anak-anak yang terdaftar sebagai pelajar EtnoW Legend dan orang tua atau wali mereka yang terkait dengan anak-anak di dalam catatan resmi EtnoW Legend"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="d."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Anak-anak yang mungkin tidak terdaftar tetapi terjangkau melalui kegiatan pemasaran atau penjualan produk dan orang tua atau wali mereka yang terkait dengan anak tersebut; dan"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="e."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Setiap orang atau organisasi yang mungkin secara resmi terkait dengan EtnoW Legend dan lingkup pekerjaan dan aktivitas EtnoW Legend."
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Dalam kasus dan keadaan dimana EtnoW Legend  mungkin tidak mensyaratkan kontrol atas pihak yang dikhawatirkan berdasarkan kebijakan ini, termasuk dalam hal kekerasan terhadap anak."
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="6"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Hak Kekayaan Intelektual"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Pengguna mengakui dan menyetujui bahwa Platform kami, termasuk namun tidak terbatas pada konten mana pun yang terdapat pada Platform, nama, logo, kode program, desain, merek dagang, teknologi, basis data, konten dan proses dan model bisnis, dilindungi oleh hak cipta, merek, paten, hak moral dan hak kekayaan intelektual lainnya yang dimiliki oleh dan terdaftar secara sah pada badan pemerintahan yang berwenang atas nama kami atau afiliasi kami. Penggunaan isi dan konten Platform tunduk dan mengacu kepada Syarat dan Ketentuan ini. Konten, gambar, suara, dan video pada Platform hanya dapat digunakan secara utuh apa adanya tanpa ada perubahan, untuk kebutuhan penggunaan pribadi dan non-komersial. Pengunduhan dan penggunaan lainnya yang melanggar Syarat dan Ketentuan ini adalah perbuatan yang dilarang.Pengguna tidak diperkenankan untuk mengubah salinan dalam bentuk kertas maupun digital dari materi apa pun yang telah Pengguna cetak atau unduh dengan cara apa pun, dan Pengguna tidak boleh menggunakan ilustrasi, foto-foto, potongan video atau audio, maupun grafis lain secara terpisah dari teks pendampingnya."
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="7"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Pengguna dilarang untuk:"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="a."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menyalin, mengubah, mencetak, mengadaptasi, menerjemahkan, menciptakan karya tiruan dari, mendistribusikan, memberi lisensi, menjual, memindahkan, menampilkan secara publik, menggandakan, mengirimkan, menyiarkan lewat media daring maupun luring, memotong, membongkar, atau sebaliknya mengeksploitasi bagian mana pun dari Platform kami, termasuk namun tidak terbatas pada konten-konten dan materi-materi berbayar pada Platform, baik secara fisik maupun digital, selama masa berlangganan maupun setelah selesainya berlangganan Platform;"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="b."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Memberi lisensi, memberi lisensi turunan, menjual, menjual ulang, mengirimkan, mengalihkan, mendistribusikan, atau sebaliknya mengeksploitasi atau membagikan secara komersial atau cara apapun Platform kami dan/atau perangkat lunak lain yang terasosiasi dengan Platform kami (termasuk konten atau data kami) dengan cara apa pun;"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="c."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menciptakan tautan internet menuju Platform kami, atau menyadur (frame), atau mengkomputasi (mirror) perangkat lunak mana pun pada server atau perangkat nirkabel atau perangkat yang terhubung ke internet lainnya;"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="d."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Merekayasa balik atau mengakses Platform kami untuk (i) membangun produk atau jasa yang kompetitif; (ii) membangun produk berdasarkan ide, fitur, fungsi, maupun grafis yang serupa dengan Platform kami; atau (iii) menyalin ide, fitur, fungsi, atau grafis pada Platform kami;"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="e."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menjalankan program atau skrip otomatis termasuk, namun tidak terbatas pada, web spiders, web crawlers, web robots, web ants, web indexing, bots, viruses, worms, atau program apa pun yang dapat meningkatkan permintaan server per detik, atau membuat beban terlalu berat yang mengganggu operasi dan/atau kinerja Platform kami;"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="f."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menggunakan robots, spiders, aplikasi pencarian atau pengambilan situs, maupun perlengkapan dan proses manual atau otomatis lain untuk mengambil, membuat indeks, menambang data, atau dengan cara apa pun menggandakan atau menghindari struktur navigasi atau tampilan Platform kami maupun kontennya;"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="g."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menempatkan, mendistribusikan, atau menggandakan dengan cara apa pun materi dengan hak cipta, merek dagang, atau informasi kepemilikan lain tanpa sebelumnya memperoleh persetujuan dari pemilik hak kepemilikan; dan"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:paddingRight="10dp"
+                android:text="h."
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mengubah atau menghapus hak cipta, merek dagang, atau tanda hak kepemilikan lainnya yang terkandung dalam Platform kami. Tidak ada lisensi atau hak yang diberikan kepada Pengguna secara implisit atau sebaliknya berdasarkan hak kekayaan intelektual yang dimiliki atau dikendalikan oleh kami dan pemberi lisensi kami, kecuali lisensi dan hak yang secara tersurat diberikan dalam Syarat dan Ketentuan ini. Pengguna tidak boleh menggunakan bagian mana pun dari konten pada Platform kami untuk tujuan komersial tanpa sebelumnya memperoleh izin untuk melakukannya dari kami atau pemberi lisensi kami."
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Status kami (dan status kontributor lain yang telah kami identifikasi) sebagai pembuat dari konten pada Platform kami harus selalu diakui. Jika Pengguna mencetak, menyalin, atau mengunduh bagian mana pun dari Platfrom kami yang melanggar Syarat dan Ketentuan ini, hak Pengguna untuk menggunakan Platform kami akan segera dihentikan dan Pengguna wajib, berdasarkan keputusan kami, mengembalikan atau memusnahkan salinan dari materi yang telah Pengguna buat. Kami mereservasi hak kami untuk melakukan investigasi maupun menuntut bentuk pelanggaran apa pun terhadap Syarat dan Ketentuan ini sesuai dengan ketentuan hukum yang berlaku. Kami dapat melibatkan dan bekerja sama dengan pihak yang berwenang dalam menuntut pengguna yang melanggar Syarat dan Ketentuan ini. Pengguna mengakui bahwa kami tidak diwajibkan untuk mengawasi akses Pengguna terhadap Platform kami, tapi kami berhak untuk melakukannya dengan tujuan mengoperasikan Platform kami, memastikan kepatuhan Pengguna dengan Syarat dan Ketentuan ini, atau untuk menaati hukum yang berlaku atau putusan pengadilan, lembaga administratif, maupun badan pemerintahan lainnya."
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="8"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Pengunggahan Konten pada Platform Kami"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Pengguna dapat menggunakan fitur yang memungkinkan Pengguna mengunggah konten maupun materi ke Platform kami. Dengan ketentuan bahwa Konten tidak dibenarkan terkait dengan hal-hal berikut."
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bullet2"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mengandung materi yang mencemarkan nama baik seseorang;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mengandung materi yang tidak senonoh, menyinggung, bersifat kebencian, atau menghasut;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mengandung materi yang tidak senonoh, menyinggung, bersifat kebencian, atau menghasut;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menunjukkan konten yang berkaitan dengan perjudian, undian, dan/atau taruhan;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menunjukkan materi yang eksplisit secara seksual atau tidak bermoral;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menunjukkan kekerasan, diskriminasi berdasarkan ras, jenis kelamin, agama, kebangsaan, kecacatan, orientasi seksual, atau usia;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menunjukkan jasa peretasan dan/atau pembobolan;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menunjukkan akses terhadap produk penipuan, pencucian uang, skema pemasaran berjenjang (multi-level marketing), serta produk bajakan;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menunjukkan akses terhadap perdagangan manusia dan organ tubuh manusia;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menunjukkan akses terhadap zat-zat terlarang dan narkotika;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menunjukkan akses terhadap rokok dan berbahan dasar tembakau;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mempromosikan penjualan tidak sah terhadap produk-produk yang membutuhkan izin (misalnya obat-obatan, bahan peledak, senjata api, dan lain-lain);"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Melanggar hak kekayaan intelektual termasuk hak cipta, hak pangkalan data (database right), atau pun merek dagang pihak lain;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Dibuat dengan melanggar kewajiban hukum apa pun kepada pihak ketiga, seperti kewajiban kontrak atau kewajiban menjaga kerahasiaan;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menunjukkan aktivitas pelanggaran hukum apa pun;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mengancam, menyalahgunakan, atau menyerang privasi orang lain, atau menyebabkan gangguan, ketidaknyamanan, maupun kecemasan yang tidak perlu;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Dapat melecehkan, menyinggung, mempermalukan, membuat khawatir, atau mengganggu siapa pun;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Digunakan untuk menyamar sebagai orang lain, atau untuk memalsukan identitas atau afiliasi Anda dengan orang lain;"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Memberi kesan bahwa Konten tersebut berasal dari kami, ketika tidak benar demikian; dan"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="\u2022"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mengadvokasi, mempromosikan, atau membantu tindakan yang melanggar hukum seperti (hanya sebagai contoh) pelanggaran hak cipta atau penyalahgunaan komputer."
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Pengguna menjamin bahwa Konten tersebut telah mematuhi standar yang telah disebutkan, dan bahwa Pengguna akan bertanggung jawab secara penuh kepada kami dan mengganti kerugian kami atas pelanggaran terhadap jaminan tersebut. Dengan demikian, Pengguna akan bertanggung jawab untuk segala kerugian atau kerusakan yang kami derita akibat pelanggaran jaminan dari Pengguna. Kami tidak bertanggung jawab atau dikenakan kewajiban oleh pihak ketiga mana pun, untuk Konten atau akurasi dari Konten mana pun yang Pengguna unggah ke dalam Platform kami."
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="9"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Tindakan yang Kami Anggap Perlu"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Apabila kami mengetahui atau mempunyai alasan yang cukup untuk menduga bahwa Pengguna telah melakukan tindakan tidak bermoral, pelanggaran, kejahatan atau tindakan lain yang bertentangan dengan Syarat dan Ketentuan ini dan/atau peraturan perundang-undangan yang berlaku, baik yang dirujuk dalam Syarat dan Ketentuan ini atau tidak, maka kami berhak untuk dan dapat memblokir Akun, baik sementara atau permanen, atau menghentikan akses Anda terhadap Platform, melakukan pemeriksaan, menuntut ganti kerugian, melaporkan kepada pihak berwenang dan/atau mengambil tindakan lain yang kami anggap perlu, termasuk tindakan hukum pidana maupun perdata."
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="10"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Tanggung Jawab Pengguna"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Pengguna bertanggung jawab secara penuh atas setiap kerugian dan/atau klaim yang timbul dari penggunaan Platform melalui akun Pengguna, baik oleh Pengguna atau pihak lain yang menggunakan akun Pengguna, dengan cara yang bertentangan dengan Syarat dan Ketentuan ini, peraturan perundang-undangan yang berlaku, pelanggaran hak kekayaan intelektual dan/atau aktivitas lain yang merugikan publik dan/atau pihak lain manapun atau yang dapat atau dianggap dapat merusak reputasi kami. Kami tidak menjamin bahwa Platform akan aman atau terbebas dari bug atau virus. Pengguna bertanggung jawab untuk mengelola keberlangsungan, keselamatan, keamanan teknologi informasi, Kode Akses, program komputer, serta platform yang Anda gunakan untuk mengakses Platform/jasa/konten kami (termasuk kewajiban Anda sendiri untuk memastikan kerahasiaan dan izin akses atau penggunaan Platform dan konten kami. Pengguna harus menggunakan perangkat lunak, perangkat yang sesuai dan anti-virus Pengguna sendiri."
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="11"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Penafian dan Batasan Tanggung Jawab"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Pengguna memahami dan menyetujui bahwa layanan dalam Platform kami disediakan dengan “apa adanya” dan “sebagaimana tersedia”. Sejauh dimungkinkan oleh peraturan perundang-undangan yang berlaku, kami tidak, baik secara tegas maupun tersirat, membuat suatu jaminan, mendukung atau memberikan pernyataan dalam bentuk apa pun sehubungan dengan pemberian layanan dalam Platform kami, hal ini termasuk namun tidak terbatas pada:  tidak adanya jaminan sehubungan dengan penjualan dan kesesuaian untuk tujuan tertentu dan tidak adanya pembajakan; dan tidak ada jaminan bahwa akses terhadap atau penggunaan Platform tidak akan terganggu atau menjadi kacau atau tidak ada kesalahan (error) atau cacat pada Platform akan diperbaiki. Dengan menggunakan dan mengakses Platform kami, Pengguna setuju untuk secara mandiri memverifikasi secara mandiri keaslian dan kebenaran jawaban, informasi, materi dan konten yang dipublikasikan dalam Platform atau situs. Lebih lanjut,  EtnoW Legend tidak memberikan jaminan atau pernyataan sehubungan dengan hasil yang mungkin didapat dari penggunaan jasa dalam Platform, sehubungan dengan ketepatan atau keandalan atas setiap informasi (termasuk namun tidak terbatas pada konten, data, dan lain sebagainya) yang didapat melalui jasa pada Platform atau yang Platform/jasa akan sesuaikan dengan permintaan Pengguna, atau tidak terganggu, tepat waktu, aman atau bebas dari kesalahan. Penggunaan setiap materi dan/atau data yang diunduh, dilihat atau dengan cara lain didapatkan atau diakses melalui penggunaan Platform/jasa adalah merupakan kebijakan dan risiko tunggal dari Pengguna. Seluruh risiko yang muncul dari penggunaan atau pelaksanaan jasa adalah milik Anda. EtnoW Legend tidak memiliki kewajiban apapun untuk menyimpan informasi apapun dari Pengguna atau komunikasi dengan atau antara Pengguna. Penggunaan Platform dan setiap tindakan yang Pengguna lakukan atas dasar informasi yang terdapat di Platform adalah tanggung jawab dan risiko Pengguna sendiri dan kami tidak bertanggung jawab atas konsekuensi tindakan yang Pengguna lakukan."
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="12"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Keadaan Kahar"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Platform kami dan ketersediaan jasa kami (seluruh atau sebagian) dapat terganggu oleh kejadian di luar kewenangan atau kontrol kami (“Keadaan Kahar”), termasuk namun tidak terbatas pada bencana alam, epidemi, kerusuhan, karantina wilayah, gangguan listrik, gangguan telekomunikasi, perubahan peraturan perundang-undangan yang berlaku dan kebijakan pemerintah, dan lain-lain. Pengguna setuju untuk membebaskan kami dan afiliasi kami dari setiap tuntutan dan tanggung jawab, jika kami tidak dapat memfasilitasi layanan (sebagian atau seluruhnya), termasuk memenuhi instruksi yang Pengguna berikan melalui Platform, baik sebagian maupun seluruhnya, karena suatu Keadaan Kahar."
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extra_bold"
+                android:text="13"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Peraturan Lainnya"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Pengguna mengerti dan setuju bahwa Syarat dan Ketentuan ini merupakan persetujuan dalam bentuk elektronik dengan mengakses Platform kami dan konfirmasi lebih lanjut dengan dan tindakan Pengguna menekan tombol ‘daftar’ saat pembukaan Akun atau tombol ‘masuk’ saat akan mengakses Akun Pengguna merupakan persetujuan aktif Pengguna untuk mengikatkan diri dalam perjanjian dengan kami sehingga keberlakuan Syarat dan Ketentuan ini dan Kebijakan Privasi adalah sah dan mengikat secara hukum dan terus berlaku sepanjang penggunaan Platform, layanan dan data EtnoW Legend dan sepanjang EtnoW Legend masih tersedia. Kami dapat mengubah Syarat dan Ketentuan ini kapan pun dengan mengubah halaman ini. Mohon kunjungi kembali halaman ini dari waktu ke waktu guna memperhatikan ada tidaknya perubahan yang kami buat, karena perubahan tersebut akan mengikat Pengguna dari waktu ke waktu. Kami dapat memperbarui Platform dari waktu ke waktu serta mengubah kontennya kapan pun. Meskipun demikian, perlu diketahui bahwa Platform kami dapat memiliki konten yang tidak diperbarui pada waktu tertentu, dan kami tidak bertanggung jawab untuk memperbaruinya. Kami tidak menjamin bahwa Platform kami, maupun konten yang terkandung di dalamnya, dapat bebas sepenuhnya dari kesalahan atau kelalaian. Pengguna tidak akan mengajukan tuntutan atau keberatan apapun terhadap keabsahan dari Syarat dan Ketentuan atau Kebijakan Privasi yang dibuat dalam bentuk elektronik. Bila Pengguna tidak mematuhi atau melanggar ketentuan dalam Syarat dan Ketentuan ini, dan jika kami tidak mengambil tindakan secara langsung, bukan berarti kami mengesampingkan hak kami untuk mengambil tindakan yang diperlukan di kemudian hari. Syarat dan Ketentuan ini tetap berlaku bahkan setelah pemblokiran sementara, pemblokiran permanen, penghapusan Platform atau setelah berakhirnya perjanjian ini antara Anda dan kami. Jika salah satu dari ketentuan dalam Syarat dan Ketentuan ini tidak dapat berlaku, hal tersebut tidak akan memengaruhi ketentuan lainnya."
+            android:textColor="@color/black" />
+
+        <com.codesgood.views.JustifiedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Pengguna dapat menghubungi kami termasuk memiliki pertanyaan mengenai Syarat dan Ketentuan ini, silahkan menghubungi kami melalui etnowlegends@gmail.com, Dibuat," />
+
+    </LinearLayout>
+
+
+</ScrollView>

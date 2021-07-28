@@ -11,9 +11,8 @@
         android:id="@+id/imageView10"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="235dp"
+        android:layout_marginBottom="285dp"
         android:contentDescription="@string/image"
-        android:src="@drawable/more_five"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout13"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout13"
         app:layout_constraintHorizontal_bias="0.493"
@@ -23,7 +22,7 @@
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginBottom="219dp"
+        android:layout_marginBottom="270dp"
         android:backgroundTint="@color/green"
         android:text="Level Selesai"
         android:textAllCaps="false"
@@ -47,12 +46,29 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="UselessParent">
 
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Nama: "
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/school"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Sekolah: "
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/correct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Jawaban benar: "
             android:textAlignment="center"
@@ -62,7 +78,6 @@
             android:id="@+id/wrong"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:text="Jawaban salah: "
             android:textAlignment="center"
             android:textColor="@color/black" />
@@ -88,7 +103,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="230dp"
         android:background="@drawable/rounded_view"
         android:backgroundTint="@color/green"
         android:elevation="3dp"
@@ -111,9 +126,9 @@
 
     <View
         android:id="@+id/view20"
-        android:layout_width="56dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="180dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="230dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/rounded_view"
         android:backgroundTint="@color/green"
@@ -142,7 +157,7 @@
         android:background="@drawable/rounded_view"
         android:backgroundTint="@color/green"
         android:elevation="3dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="210dp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout13"
         app:layout_constraintStart_toStartOf="@+id/linearLayout13"
         app:layout_constraintTop_toBottomOf="@+id/button5" />

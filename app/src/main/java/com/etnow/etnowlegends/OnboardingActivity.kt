@@ -6,6 +6,9 @@ import android.os.Bundle
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 import com.etnow.etnowlegends.databinding.ActivityOnboardingBinding
+import com.etnow.etnowlegends.databinding.FragmentBottomSheetOnboardingBinding
+import com.etnow.etnowlegends.utils.BottomSheetFragment
+import com.etnow.etnowlegends.utils.BottomSheetFragmentOnboarding
 
 class OnboardingActivity : AppCompatActivity() {
 
@@ -19,9 +22,9 @@ class OnboardingActivity : AppCompatActivity() {
 
         val imageList = ArrayList<SlideModel>() // Create image list
 
-        imageList.add(SlideModel(R.drawable.ob1))
-        imageList.add(SlideModel(R.drawable.ob2))
-        imageList.add(SlideModel(R.drawable.ob3))
+        imageList.add(SlideModel(R.drawable.onboarding1))
+        imageList.add(SlideModel(R.drawable.onboarding2))
+        imageList.add(SlideModel(R.drawable.onboarding3))
 
         val imageSlider = findViewById<ImageSlider>(R.id.imageView2)
         imageSlider.setImageList(imageList)
@@ -30,7 +33,11 @@ class OnboardingActivity : AppCompatActivity() {
         // KLIK MASUK DISINI
         binding?.view?.setOnClickListener {
             startActivity(Intent(this, IdentityActivity::class.java))
-            finish()
+        }
+
+        binding?.petunjuk?.setOnClickListener {
+            val bottomSheetFragment = BottomSheetFragmentOnboarding()
+            bottomSheetFragment.show(supportFragmentManager, "ButtonSheetDialog")
         }
 
 

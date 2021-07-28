@@ -40,22 +40,22 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="10dp"
         android:text="Pilih materi yang akan kamu pelajari"
-        android:textColor="@color/btnTint"
+        android:textColor="@color/black"
         android:textStyle="bold"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/poppins_regular"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back" />
 
-    <TextView
+    <com.codesgood.views.JustifiedTextView
         android:id="@+id/textView22"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/poppins_regular"
         android:layout_marginEnd="32dp"
         android:text="@string/sub_materi_desc"
-        android:textColor="@color/btnTint"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
@@ -98,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:fontFamily="@font/montserrat_extra_bold"
+        android:fontFamily="@font/poppins_extra_bold"
         android:text="Persegi"
         android:textColor="@color/btnTint"
         app:layout_constraintBottom_toBottomOf="@+id/view4"
@@ -110,8 +110,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/poppins_regular"
         android:text="Pelajari Bangun Datar\nPersegi"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
@@ -155,7 +156,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/montserrat_extra_bold"
+        android:fontFamily="@font/poppins_extra_bold"
         android:text="Persegi Panjang"
         android:textColor="@color/btnTint"
         app:layout_constraintStart_toEndOf="@+id/view9"
@@ -166,7 +167,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_regular"
         android:text="Pelajari Bangun Datar\nPersegi Panjang"
         app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
         app:layout_constraintTop_toBottomOf="@+id/tv10" />
@@ -204,7 +206,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="12dp"
-        android:fontFamily="@font/montserrat_extra_bold"
+        android:fontFamily="@font/poppins_extra_bold"
         android:text="Segitiga"
         android:textColor="@color/btnTint"
         app:layout_constraintStart_toEndOf="@+id/view11"
@@ -214,8 +216,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/poppins_regular"
         android:text="Pelajari Bangun Datar\nSegitiga"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
         app:layout_constraintTop_toBottomOf="@+id/tv111" />
 

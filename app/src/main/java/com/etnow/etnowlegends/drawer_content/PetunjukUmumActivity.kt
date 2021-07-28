@@ -13,7 +13,6 @@ class PetunjukUmumActivity : AppCompatActivity() {
         binding = ActivityPetunjukUmumBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        binding?.webview?.loadUrl("https://textuploader.com/tarki")
 
         binding?.imageButton2?.setOnClickListener {
             onBackPressed()

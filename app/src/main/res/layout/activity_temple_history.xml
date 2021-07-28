@@ -91,11 +91,12 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/text14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:textColor="@color/black"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_regular"
             android:layout_marginEnd="32dp"
@@ -104,13 +105,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
             android:layout_marginEnd="32dp"
             android:text="@string/desc2"
             app:layout_constraintEnd_toEndOf="parent"

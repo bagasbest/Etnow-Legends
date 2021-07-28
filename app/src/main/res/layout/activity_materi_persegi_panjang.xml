@@ -62,12 +62,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView25"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Persegi merupakan bangun datar yang dibatasi oleh 4 sisi yang memiliki panjang dan lebar berbeda serta memiliki 4 sudut."
@@ -81,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:fontFamily="@font/montserrat_extra_bold"
+            android:fontFamily="@font/poppins_extra_bold"
             android:text="Perhatikan gambar permukaan atas candi dibawah ini."
             android:textColor="@color/btnTint"
             app:layout_constraintEnd_toEndOf="parent"
@@ -99,12 +100,13 @@
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView27"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Gambar di atas merupakan dinding candi Sanggrahan bagian atas yang terdiri dari susunan batu yang berbentuk persegi panjang. Maka pola bangun datar persegi panjang yang di dapat seperti di bawah ini."
@@ -123,12 +125,13 @@
             app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView28"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Dapat disimpulkan bahwa persegi panjang merupakan bangun datar yang dibatasi oleh dua sisi sejajar yang sama panjang. Sisi sejajar yang lebih panjang disebut panjang, sedangkan sisi yang lebih pendek disebut lebar."
@@ -137,12 +140,13 @@
             app:layout_constraintTop_toBottomOf="@+id/pc2" />
 
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView29"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Dari pola persegi panjang di atas, dapat diketahui bahwa persegi panjang memiliki:"
@@ -188,11 +192,12 @@
                 android:text="1"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/bullet1Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
                 android:text="Dua pasang sisi yang sama panjang tersebut adalah:\nAB = CD, dinamakan panjang\nAD = BC, dinamakan lebar" />
@@ -218,23 +223,25 @@
                 android:text="2"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/bullet2Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
                 android:text="Memiliki dua diagonal sama panjang, yaitu AC = BD." />
         </LinearLayout>
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView30"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
+            android:textColor="@color/black"
             android:fontFamily="@font/poppins_regular"
             android:text="Sifat-sifat yang di miliki persegi panjang antara lain:"
             app:layout_constraintEnd_toEndOf="parent"
@@ -261,11 +268,12 @@
                 android:text="1"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/bullet3Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
                 android:text="Memiliki empat sisi" />
@@ -291,11 +299,12 @@
                 android:text="2"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/bullet4Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
                 android:text="Memiliki empat sudut sebesar 90 derajat" />
@@ -321,11 +330,12 @@
                 android:text="3"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/bullet5Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
                 android:text="Memiliki 2 pasang sisi berhadapan sejajar dan sama panjang" />
@@ -351,14 +361,14 @@
                 android:text="4"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet6Text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Diagonalnya saling berpotongan tidak tegak lurus" />
+                android:text="Diagonalnya saling berpotongan tidak tegak lurus"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -381,11 +391,12 @@
                 android:text="5"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/bullet7Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
                 android:text="Memiliki 2 simetri lipat" />
@@ -402,12 +413,13 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
 
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView31"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Untuk menentukan luas sebuah persegi panjang, dapat menggunakan rumus:\nL = DC x CB atau AB x DA"
@@ -424,26 +436,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView32"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
+            android:textColor="@color/black"
             android:fontFamily="@font/poppins_regular"
             android:text="Keterangan:\nL = Luas \np = panjang\nl = lebar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/luas_persegi" />
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView33"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
+            android:textColor="@color/black"
             android:fontFamily="@font/poppins_regular"
             android:text="Untuk menentukan keliling sebuah persegi panjang, dapat menggunakan rumus:\nK = AB + BC + CD + AD\nK = s + s + s + s"
             app:layout_constraintEnd_toEndOf="parent"
@@ -465,6 +479,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Keterangan:\nK = Keliling\ns = sisi"

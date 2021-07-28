@@ -62,11 +62,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView25"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:textColor="@color/black"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
@@ -81,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:fontFamily="@font/montserrat_extra_bold"
+            android:fontFamily="@font/poppins_extra_bold"
             android:text="Perhatikan gambar permukaan atas candi dibawah ini."
             android:textColor="@color/btnTint"
             app:layout_constraintEnd_toEndOf="parent"
@@ -99,11 +100,12 @@
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView27"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:textColor="@color/black"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
@@ -123,10 +125,11 @@
             app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView28"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
@@ -137,12 +140,13 @@
             app:layout_constraintTop_toBottomOf="@+id/pc2" />
 
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView29"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Dari sini dapat di peroleh bahwa persegi memiliki:"
@@ -188,10 +192,11 @@
                 android:text="1"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/bullet1Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginEnd="32dp"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
@@ -218,21 +223,23 @@
                 android:text="2"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/bullet2Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
                 android:text="Sudut-sudut persegi ABCD sama besar, yaitu:\nsudut ABC = sudut BCD = sudut CDA = sudut DAB = 90°." />
         </LinearLayout>
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView30"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:textColor="@color/black"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
@@ -261,11 +268,12 @@
                 android:text="1"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/bullet3Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingBottom="10dp"
                 android:text="Semua sisi persegi adalah sama panjang." />
@@ -291,14 +299,14 @@
                 android:text="2"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet4Text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Sudut-sudut suatu persegi dibagi dua sama besar oleh diagonal-diagonalnya." />
+                android:text="Sudut-sudut suatu persegi dibagi dua sama besar oleh diagonal-diagonalnya."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -321,14 +329,14 @@
                 android:text="3"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/bullet5Text"
-                android:layout_width="wrap_content"
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingBottom="10dp"
-                android:text="Diagonal-diagonal persegi saling berpotongan sama panjang membentuk sudut siku-siku." />
+                android:text="Diagonal-diagonal persegi saling berpotongan sama panjang membentuk sudut siku-siku."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular" />
+
         </LinearLayout>
 
 
@@ -342,13 +350,14 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView31"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
+            android:textColor="@color/black"
             android:fontFamily="@font/poppins_regular"
             android:text="Untuk menentukan luas sebuah persegi, dapat menggunakan rumus:\nL = AB x BC\nL = s x s"
             app:layout_constraintEnd_toEndOf="parent"
@@ -371,6 +380,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
+            android:textColor="@color/black"
             android:fontFamily="@font/poppins_regular"
             android:text="Keterangan:\nL = Luas\ns = sisi"
             app:layout_constraintEnd_toEndOf="parent"
@@ -379,10 +389,11 @@
 
 
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:id="@+id/textView33"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
@@ -407,6 +418,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Keterangan:\nK = Keliling\ns = sisi"

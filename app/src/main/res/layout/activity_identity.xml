@@ -49,12 +49,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_regular"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Perlu bantuan ?"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/petunjuk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -98,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/montserrat_regular"
+            android:fontFamily="@font/poppins_regular"
             android:text="Halo!\nSelamat Datang!"
             android:textColor="@color/primary"
             android:textSize="32sp"
@@ -113,6 +114,7 @@
             android:layout_marginStart="16dp"
             android:text="Silahkan masukkan identitas kamu"
             android:textColor="@color/primary"
+            android:fontFamily="@font/poppins_regular"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -127,6 +129,7 @@
             android:drawableStart="@drawable/ic_baseline_person_outline_24"
             android:drawablePadding="10dp"
             android:hint="Nama"
+            android:fontFamily="@font/poppins_regular"
             android:importantForAutofill="no"
             android:inputType="textCapWords"
             app:layout_constraintEnd_toEndOf="parent"
@@ -143,6 +146,7 @@
             android:drawableStart="@drawable/ic_baseline_person_outline_24"
             android:drawablePadding="10dp"
             android:hint="Kelas"
+            android:fontFamily="@font/poppins_regular"
             android:importantForAutofill="no"
             android:inputType="textCapWords"
             app:layout_constraintEnd_toEndOf="parent"
@@ -158,6 +162,7 @@
             android:layout_marginEnd="16dp"
             android:drawableStart="@drawable/ic_baseline_person_outline_24"
             android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Nama Seklolah"
             android:importantForAutofill="no"
             android:inputType="textCapWords"

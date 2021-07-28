@@ -51,16 +51,20 @@ class PP3Activity : AppCompatActivity() {
         setContentView(binding?.root)
 
         if(intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
+            binding?.finish?.text = "Pembahasan"
             result = intent.getIntExtra(RESULT, 0)
             getTime = intent.getLongExtra(TIME, 0L)
             countdownTimer(getTime!!)
             pickedChoice()
         }
         else {
+            binding?.finish?.text = "Selesai"
             isPicked = true
             binding?.pilgan?.visibility = View.GONE
             binding?.textView35?.visibility = View.VISIBLE
             binding?.textView40?.visibility = View.VISIBLE
+            binding?.textView36?.visibility = View.INVISIBLE
+            binding?.textView37?.visibility = View.INVISIBLE
         }
 
         prefs = getSharedPreferences(
@@ -80,7 +84,18 @@ class PP3Activity : AppCompatActivity() {
 
         binding?.finish?.setOnClickListener {
             if(isPicked == true) {
-                showQuizResult()
+               // showQuizResult()
+                if(intent.getStringExtra(EXTRA_OPT) == "kerjakan") {
+                    val intent = Intent(this, PPActivity::class.java)
+                    intent.putExtra(PPActivity.EXTRA_OPT, "pembahasan")
+                    startActivity(intent)
+                    finish()
+                }
+                else {
+                    val intent = Intent(this, MateriPersegiPanjangActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
             }
             else {
                 Toast.makeText(this, "Silahkan pilih jawaban kamu terlebih dahulu", Toast.LENGTH_SHORT).show()
@@ -96,6 +111,11 @@ class PP3Activity : AppCompatActivity() {
 
 
         val sfx = prefs.getBoolean("sfx", false)
+        val name = prefs.getString("key", "")
+        val school = prefs.getString("school", "")
+
+        binding.name.text = "Nama: $name"
+        binding.school.text = "Sekolah: $school"
 
         if (result!! >= 2) {
             Glide
@@ -123,7 +143,6 @@ class PP3Activity : AppCompatActivity() {
 
         binding.view21.setOnClickListener {
             val intent = Intent(this, MateriPersegiPanjangActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
         }
@@ -131,7 +150,6 @@ class PP3Activity : AppCompatActivity() {
         binding.pembahasan.setOnClickListener {
             val intent = Intent(this, PPActivity::class.java)
             intent.putExtra(PPActivity.EXTRA_OPT, "pembahasan")
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
         }
@@ -191,7 +209,7 @@ class PP3Activity : AppCompatActivity() {
         binding?.a?.setOnClickListener {
             result = result?.plus(1)
             isPicked = true
-            binding?.a?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.a?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
@@ -201,7 +219,7 @@ class PP3Activity : AppCompatActivity() {
             result = result?.plus(0)
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.b?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.b?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
         }
@@ -211,7 +229,7 @@ class PP3Activity : AppCompatActivity() {
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.c?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.c?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.d?.setBackgroundColor(resources.getColor(R.color.green))
         }
 
@@ -221,7 +239,7 @@ class PP3Activity : AppCompatActivity() {
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.c?.setBackgroundColor(resources.getColor(R.color.green))
-            binding?.d?.setBackgroundColor(resources.getColor(R.color.yellow))
+            binding?.d?.setBackgroundColor(resources.getColor(R.color.darker_green))
         }
     }
 
