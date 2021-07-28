@@ -35,21 +35,23 @@ class MateriHintActivity : AppCompatActivity() {
                 .into(it)
         }
 
-        when (getType) {
-            "persegi" -> {
-                val intent = Intent(this, PersegiActivity::class.java)
-                intent.putExtra(PersegiActivity.EXTRA_OPT, "kerjakan")
-                startActivity(intent)
-            }
-            "pp" -> {
-                val intent = Intent(this, PPActivity::class.java)
-                intent.putExtra(PPActivity.EXTRA_OPT, "kerjakan")
-                startActivity(intent)
-            }
-            "sg" -> {
-                val intent = Intent(this, SG1Activity::class.java)
-                intent.putExtra(SG1Activity.EXTRA_OPT, "kerjakan")
-                startActivity(intent)
+        binding?.btnStart?.setOnClickListener {
+            when (getType) {
+                "persegi" -> {
+                    val intent = Intent(this, PersegiActivity::class.java)
+                    intent.putExtra(PersegiActivity.EXTRA_OPT, "kerjakan")
+                    startActivity(intent)
+                }
+                "pp" -> {
+                    val intent = Intent(this, PPActivity::class.java)
+                    intent.putExtra(PPActivity.EXTRA_OPT, "kerjakan")
+                    startActivity(intent)
+                }
+                "sg" -> {
+                    val intent = Intent(this, SG1Activity::class.java)
+                    intent.putExtra(SG1Activity.EXTRA_OPT, "kerjakan")
+                    startActivity(intent)
+                }
             }
         }
 
