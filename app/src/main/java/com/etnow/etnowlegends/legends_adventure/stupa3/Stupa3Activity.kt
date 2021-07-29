@@ -60,6 +60,7 @@ class Stupa3Activity : AppCompatActivity() {
 
 
         binding?.back?.setOnClickListener {
+            deleteAllPageChoice()
             onBackPressed()
         }
 
@@ -83,7 +84,7 @@ class Stupa3Activity : AppCompatActivity() {
         }
 
         binding?.view17?.setOnClickListener {
-            if (page > 1 && option == "pembahasan") {
+            if (page > 1) {
                 page -= 1
                 selectedPage()
             }
@@ -103,35 +104,49 @@ class Stupa3Activity : AppCompatActivity() {
 
     }
 
+    private fun deleteAllPageChoice() {
+        for (i in 1..10) {
+            prefs.edit().remove("page$i").apply()
+        }
+    }
+
     private fun validateAns() {
         if (page <= 10) {
 
             answer = binding?.etAnswer?.text.toString().trim()
 
-            if (page == 1 && answer == "56") {
-                result = result?.plus(1)
-            } else if (page == 2 && answer== "25") {
-                result = result?.plus(1)
-            } else if (page == 3 && answer == "18") {
-                result = result?.plus(1)
-            } else if (page == 4 && answer == "216") {
-                result = result?.plus(1)
-            } else if (page == 5 && answer == "18") {
-                result = result?.plus(1)
-            } else if (page == 6 && answer == "112") {
-                result = result?.plus(1)
-            } else if (page == 7 && answer == "2500") {
-                result = result?.plus(1)
-            } else if (page == 8 && answer == "157") {
-                result = result?.plus(1)
-            } else if (page == 9 && answer == "16") {
-                result = result?.plus(1)
-            } else if (page == 10 && answer == "31") {
-                result = result?.plus(1)
-                showPopupFinishQuiz()
-            }
-            else if(page == 10 && answer != "31"){
-                showPopupFinishQuiz()
+            when (page) {
+                1 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                2 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                3 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                4 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                5 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                6 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                7 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                8 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                9 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                10 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                    showPopupFinishQuiz()
+                }
             }
 
             page += 1
@@ -684,6 +699,10 @@ class Stupa3Activity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
 
+        if (option == "kerjakan") {
+            getPageChoice()
+        }
+
         val sfx = prefs.getBoolean("sfx", false)
         val name = prefs.getString("key", "")
         val school = prefs.getString("school", "")
@@ -711,6 +730,8 @@ class Stupa3Activity : AppCompatActivity() {
         binding.wrong.text = "Jawaban salah: ${10 - result!!}"
 
         binding.view19.setOnClickListener {
+            deleteAllPageChoice()
+            dialog.dismiss()
             val intent = Intent(this, HomeActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
@@ -718,6 +739,8 @@ class Stupa3Activity : AppCompatActivity() {
         }
 
         binding.view21.setOnClickListener {
+            deleteAllPageChoice()
+            dialog.dismiss()
             val intent = Intent(this, StupaActivity::class.java)
             startActivity(intent)
             finish()
@@ -780,6 +803,36 @@ class Stupa3Activity : AppCompatActivity() {
 
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
+    }
+
+    private fun getPageChoice() {
+        for (i in 1..10) {
+            val validator = prefs.getString("page$i", "")
+
+
+            if (i == 1 && validator == "56") {
+                result = result?.plus(1)
+            } else if (i == 2 && validator == "25") {
+                result = result?.plus(1)
+            } else if (i == 3 && validator == "18") {
+                result = result?.plus(1)
+            } else if (i == 4 && validator == "216") {
+                result = result?.plus(1)
+            } else if (i == 5 && validator == "18") {
+                result = result?.plus(1)
+            } else if (i == 6 && validator == "112") {
+                result = result?.plus(1)
+            } else if (i == 7 && validator == "2500") {
+                result = result?.plus(1)
+            } else if (i == 8 && validator == "157") {
+                result = result?.plus(1)
+            } else if (i == 9 && validator == "16") {
+                result = result?.plus(1)
+            } else if (i == 10 && validator == "31") {
+                result = result?.plus(1)
+            }
+
+        }
     }
 
     private fun checkSfx(sfx: Boolean, hasil: String) {

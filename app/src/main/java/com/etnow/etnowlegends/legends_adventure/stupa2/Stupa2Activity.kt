@@ -34,10 +34,9 @@ import java.util.concurrent.TimeUnit
 
 class Stupa2Activity : AppCompatActivity() {
 
-    private var binding: ActivityStupa2Binding?= null
+    private var binding: ActivityStupa2Binding? = null
     private var page: Int = 1
     private var result: Int? = 0
-    private var validator: String? = null
     private var isPicked: Boolean? = false
     private var time: Long? = 0L
     private var option: String? = null
@@ -62,6 +61,7 @@ class Stupa2Activity : AppCompatActivity() {
 
 
         binding?.back?.setOnClickListener {
+            deleteAllPageChoice()
             onBackPressed()
         }
 
@@ -85,7 +85,7 @@ class Stupa2Activity : AppCompatActivity() {
         }
 
         binding?.view17?.setOnClickListener {
-            if (page > 1 && option == "pembahasan") {
+            if (page > 1) {
                 page -= 1
                 selectedPage()
             }
@@ -110,30 +110,23 @@ class Stupa2Activity : AppCompatActivity() {
 
             answer = binding?.etAnswer?.text.toString().trim()
 
-            if (page == 1 && validator == "c") {
-                result = result?.plus(1)
-            } else if (page == 2 && validator == "c") {
-                result = result?.plus(1)
-            } else if (page == 3 && validator == "c") {
-                result = result?.plus(1)
-            } else if (page == 4 && answer == "44") {
-                result = result?.plus(1)
-            } else if (page == 5 && validator == "d") {
-                result = result?.plus(1)
-            } else if (page == 6 && validator == "b") {
-                result = result?.plus(1)
-            } else if (page == 7 && answer == "200") {
-                result = result?.plus(1)
-            } else if (page == 8 && answer == "128") {
-                result = result?.plus(1)
-            } else if (page == 9 && answer == "450") {
-                result = result?.plus(1)
-            } else if (page == 10 && answer == "200") {
-                result = result?.plus(1)
-                showPopupFinishQuiz()
-            }
-            else if(page == 10 && answer != "200"){
-                showPopupFinishQuiz()
+            when (page) {
+                4 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                7 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                8 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                9 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                10 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                    showPopupFinishQuiz()
+                }
             }
 
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
@@ -254,7 +247,8 @@ class Stupa2Activity : AppCompatActivity() {
     }
 
     private fun loadProperty2() {
-        binding?.textView39?.text = "Sepetak sawah berbentuk persegi dengan panjang sisi 50 m. Luas sawah tersebut adalah .... cm2"
+        binding?.textView39?.text =
+            "Sepetak sawah berbentuk persegi dengan panjang sisi 50 m. Luas sawah tersebut adalah .... cm2"
 
         binding?.textView38?.visibility = View.GONE
 
@@ -325,11 +319,10 @@ class Stupa2Activity : AppCompatActivity() {
     }
 
     private fun loadProperty4() {
-        if(option == "pembahasan") {
+        if (option == "pembahasan") {
             binding?.pilgan?.visibility = View.INVISIBLE
             binding?.etAnswer?.visibility = View.INVISIBLE
-        }
-        else {
+        } else {
             isPicked = true
             binding?.pilgan?.visibility = View.INVISIBLE
             binding?.etAnswer?.visibility = View.VISIBLE
@@ -367,11 +360,10 @@ class Stupa2Activity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun loadProperty5() {
-        if(option == "pembahasan") {
+        if (option == "pembahasan") {
             binding?.pilgan?.visibility = View.INVISIBLE
             binding?.etAnswer?.visibility = View.INVISIBLE
-        }
-        else {
+        } else {
             isPicked = true
 
             binding?.pilgan?.visibility = View.VISIBLE
@@ -416,12 +408,11 @@ class Stupa2Activity : AppCompatActivity() {
     }
 
     private fun loadProperty6() {
-        if(option == "pembahasan") {
+        if (option == "pembahasan") {
             isPicked = true
             binding?.pilgan?.visibility = View.INVISIBLE
             binding?.etAnswer?.visibility = View.INVISIBLE
-        }
-        else {
+        } else {
             isPicked = true
 
             binding?.pilgan?.visibility = View.VISIBLE
@@ -479,11 +470,10 @@ class Stupa2Activity : AppCompatActivity() {
     }
 
     private fun loadProperty7() {
-        if(option == "pembahasan") {
+        if (option == "pembahasan") {
             binding?.pilgan?.visibility = View.INVISIBLE
             binding?.etAnswer?.visibility = View.INVISIBLE
-        }
-        else {
+        } else {
             isPicked = true
 
             binding?.pilgan?.visibility = View.INVISIBLE
@@ -501,7 +491,8 @@ class Stupa2Activity : AppCompatActivity() {
         binding?.view26?.visibility = View.VISIBLE
         binding?.view27?.visibility = View.VISIBLE
 
-        binding?.textView39?.text = "Diketahui panjang dan lebar sebuah tembok candi yang berbentuk persegi panjang berturut-turut 57 cm dan 43 cm. Tentukan keliling bangun tersebut!"
+        binding?.textView39?.text =
+            "Diketahui panjang dan lebar sebuah tembok candi yang berbentuk persegi panjang berturut-turut 57 cm dan 43 cm. Tentukan keliling bangun tersebut!"
 
         binding?.textView38?.visibility = View.VISIBLE
         binding?.textView38?.let {
@@ -539,11 +530,10 @@ class Stupa2Activity : AppCompatActivity() {
     }
 
     private fun loadProperty8() {
-        if(option == "pembahasan") {
+        if (option == "pembahasan") {
             binding?.pilgan?.visibility = View.INVISIBLE
             binding?.etAnswer?.visibility = View.INVISIBLE
-        }
-        else {
+        } else {
             isPicked = true
 
             binding?.pilgan?.visibility = View.INVISIBLE
@@ -589,11 +579,10 @@ class Stupa2Activity : AppCompatActivity() {
     }
 
     private fun loadProperty9() {
-        if(option == "pembahasan") {
+        if (option == "pembahasan") {
             binding?.pilgan?.visibility = View.INVISIBLE
             binding?.etAnswer?.visibility = View.INVISIBLE
-        }
-        else {
+        } else {
             isPicked = true
 
             binding?.pilgan?.visibility = View.INVISIBLE
@@ -611,7 +600,8 @@ class Stupa2Activity : AppCompatActivity() {
         binding?.view26?.visibility = View.VISIBLE
         binding?.view27?.visibility = View.VISIBLE
 
-        binding?.textView39?.text = "Selembar kain dengan ukuran panjang 150 cm dan lebarnya 75 cm. Keliling kain tersebut adalah .... cm."
+        binding?.textView39?.text =
+            "Selembar kain dengan ukuran panjang 150 cm dan lebarnya 75 cm. Keliling kain tersebut adalah .... cm."
 
         binding?.textView38?.visibility = View.GONE
 
@@ -639,11 +629,10 @@ class Stupa2Activity : AppCompatActivity() {
     }
 
     private fun loadProperty10() {
-        if(option == "pembahasan") {
+        if (option == "pembahasan") {
             binding?.pilgan?.visibility = View.INVISIBLE
             binding?.etAnswer?.visibility = View.INVISIBLE
-        }
-        else {
+        } else {
             isPicked = true
 
             binding?.pilgan?.visibility = View.INVISIBLE
@@ -663,7 +652,8 @@ class Stupa2Activity : AppCompatActivity() {
 
         binding?.finish?.visibility = View.VISIBLE
 
-        binding?.textView39?.text = "Diketahui panjang dan lebar sebuah persegi panjang berturut-turut 57 cm dan 43 cm. Tentukan keliling persegi panjang!\n"
+        binding?.textView39?.text =
+            "Diketahui panjang dan lebar sebuah persegi panjang berturut-turut 57 cm dan 43 cm. Tentukan keliling persegi panjang!\n"
 
         binding?.view26?.background?.setTint(resources.getColor(R.color.gray_et))
         binding?.view27?.background?.setTint(resources.getColor(R.color.green))
@@ -690,7 +680,7 @@ class Stupa2Activity : AppCompatActivity() {
 
     private fun pickedChoice() {
         binding?.a?.setOnClickListener {
-            validator = "a"
+            prefs.edit().putString("page$page", "a").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
@@ -699,7 +689,7 @@ class Stupa2Activity : AppCompatActivity() {
         }
 
         binding?.b?.setOnClickListener {
-            validator = "b"
+            prefs.edit().putString("page$page", "b").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.darker_green))
@@ -708,7 +698,7 @@ class Stupa2Activity : AppCompatActivity() {
         }
 
         binding?.c?.setOnClickListener {
-            validator = "c"
+            prefs.edit().putString("page$page", "c").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
@@ -717,7 +707,7 @@ class Stupa2Activity : AppCompatActivity() {
         }
 
         binding?.d?.setOnClickListener {
-            validator = "d"
+            prefs.edit().putString("page$page", "d").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
@@ -752,6 +742,10 @@ class Stupa2Activity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
 
+        if (option == "kerjakan") {
+            getPageChoice()
+        }
+
         val sfx = prefs.getBoolean("sfx", false)
         val name = prefs.getString("key", "")
         val school = prefs.getString("school", "")
@@ -779,6 +773,8 @@ class Stupa2Activity : AppCompatActivity() {
         binding.wrong.text = "Jawaban salah: ${10 - result!!}"
 
         binding.view19.setOnClickListener {
+            deleteAllPageChoice()
+            dialog.dismiss()
             val intent = Intent(this, HomeActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
@@ -786,6 +782,8 @@ class Stupa2Activity : AppCompatActivity() {
         }
 
         binding.view21.setOnClickListener {
+            deleteAllPageChoice()
+            dialog.dismiss()
             val intent = Intent(this, StupaActivity::class.java)
             startActivity(intent)
             finish()
@@ -795,7 +793,6 @@ class Stupa2Activity : AppCompatActivity() {
             dialog.dismiss()
             page = 1
             option = "pembahasan"
-            validator = ""
             selectedOption()
             selectedPage()
         }
@@ -851,9 +848,43 @@ class Stupa2Activity : AppCompatActivity() {
         dialog.show()
     }
 
+    private fun deleteAllPageChoice() {
+        for (i in 1..10) {
+            prefs.edit().remove("page$i").apply()
+        }
+    }
+
+    private fun getPageChoice() {
+        for (i in 1..10) {
+            val validator = prefs.getString("page$i", "")
+
+            if (i == 1 && validator == "c") {
+                result = result?.plus(1)
+            } else if (i == 2 && validator == "c") {
+                result = result?.plus(1)
+            } else if (i == 3 && validator == "c") {
+                result = result?.plus(1)
+            } else if (i == 4 && validator == "44") {
+                result = result?.plus(1)
+            } else if (i == 5 && validator == "d") {
+                result = result?.plus(1)
+            } else if (i == 6 && validator == "b") {
+                result = result?.plus(1)
+            } else if (i == 7 && validator == "200") {
+                result = result?.plus(1)
+            } else if (i == 8 && validator == "128") {
+                result = result?.plus(1)
+            } else if (i == 9 && validator == "450") {
+                result = result?.plus(1)
+            } else if (i == 10 && validator == "200") {
+                result = result?.plus(1)
+            }
+        }
+    }
+
     private fun checkSfx(sfx: Boolean, hasil: String) {
         if (sfx) {
-            mpSfx = if(hasil == "win") {
+            mpSfx = if (hasil == "win") {
                 MediaPlayer.create(this, R.raw.win)
             } else {
                 MediaPlayer.create(this, R.raw.lose)

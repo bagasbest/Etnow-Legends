@@ -37,7 +37,6 @@ class Stupa6Activity : AppCompatActivity() {
     private var binding: ActivityStupa6Binding? = null
     private var page: Int = 1
     private var result: Int? = 0
-    private var validator: String? = null
     private var isPicked: Boolean? = false
     private var time: Long? = 0L
     private var option: String? = null
@@ -62,6 +61,7 @@ class Stupa6Activity : AppCompatActivity() {
 
 
         binding?.back?.setOnClickListener {
+            deleteAllPageChoice()
             onBackPressed()
         }
 
@@ -85,7 +85,7 @@ class Stupa6Activity : AppCompatActivity() {
         }
 
         binding?.view17?.setOnClickListener {
-            if (page > 1 && option == "pembahasan") {
+            if (page > 1) {
                 page -= 1
                 selectedPage()
             }
@@ -105,35 +105,39 @@ class Stupa6Activity : AppCompatActivity() {
 
     }
 
+    private fun deleteAllPageChoice() {
+        for (i in 1..10) {
+            prefs.edit().remove("page$i").apply()
+        }
+    }
+
     private fun validateAns() {
         if (page <= 10) {
 
             answer = binding?.etAnswer?.text.toString().trim()
 
-            if (page == 1 && answer == "89") {
-                result = result?.plus(1)
-            } else if (page == 2 && validator == "v") {
-                result = result?.plus(1)
-            } else if (page == 3 && answer == "80") {
-                result = result?.plus(1)
-            } else if (page == 4 && answer == "108") {
-                result = result?.plus(1)
-            } else if (page == 5 && answer == "2") {
-                result = result?.plus(1)
-            } else if (page == 6 && validator == "d") {
-                result = result?.plus(1)
-            } else if (page == 7 && answer == "4800") {
-                result = result?.plus(1)
-            } else if (page == 8 && validator == "b") {
-                result = result?.plus(1)
-            } else if (page == 9 && answer== "116") {
-                result = result?.plus(1)
-            } else if (page == 10 && validator == "c") {
-                result = result?.plus(1)
-                showPopupFinishQuiz()
-            }
-            else if(page == 10 && validator!= "c"){
-                showPopupFinishQuiz()
+            when (page) {
+                1 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                3 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                4 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                5 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                7 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                9 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                10 -> {
+                    showPopupFinishQuiz()
+                }
             }
 
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
@@ -737,7 +741,7 @@ class Stupa6Activity : AppCompatActivity() {
 
     private fun pickedChoice() {
         binding?.a?.setOnClickListener {
-            validator = "a"
+            prefs.edit().putString("page$page", "a").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
@@ -746,7 +750,7 @@ class Stupa6Activity : AppCompatActivity() {
         }
 
         binding?.b?.setOnClickListener {
-            validator = "b"
+            prefs.edit().putString("page$page", "b").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.darker_green))
@@ -755,7 +759,7 @@ class Stupa6Activity : AppCompatActivity() {
         }
 
         binding?.c?.setOnClickListener {
-            validator = "c"
+            prefs.edit().putString("page$page", "c").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
@@ -764,7 +768,7 @@ class Stupa6Activity : AppCompatActivity() {
         }
 
         binding?.d?.setOnClickListener {
-            validator = "d"
+            prefs.edit().putString("page$page", "d").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
@@ -799,6 +803,10 @@ class Stupa6Activity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
 
+        if (option == "kerjakan") {
+            getPageChoice()
+        }
+
         val sfx = prefs.getBoolean("sfx", false)
         val name = prefs.getString("key", "")
         val school = prefs.getString("school", "")
@@ -825,6 +833,8 @@ class Stupa6Activity : AppCompatActivity() {
         binding.wrong.text = "Jawaban salah: ${10 - result!!}"
 
         binding.view19.setOnClickListener {
+            deleteAllPageChoice()
+            dialog.dismiss()
             val intent = Intent(this, HomeActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
@@ -832,6 +842,8 @@ class Stupa6Activity : AppCompatActivity() {
         }
 
         binding.view21.setOnClickListener {
+            deleteAllPageChoice()
+            dialog.dismiss()
             val intent = Intent(this, StupaActivity::class.java)
             startActivity(intent)
             finish()
@@ -841,7 +853,6 @@ class Stupa6Activity : AppCompatActivity() {
             dialog.dismiss()
             page = 1
             option = "pembahasan"
-            validator = ""
             selectedOption()
             selectedPage()
         }
@@ -895,6 +906,34 @@ class Stupa6Activity : AppCompatActivity() {
 
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
+    }
+
+    private fun getPageChoice() {
+        for (i in 1..10) {
+            val validator = prefs.getString("page$i", "")
+
+            if (i == 1 && validator == "89") {
+                result = result?.plus(1)
+            } else if (i == 2 && validator == "c") {
+                result = result?.plus(1)
+            } else if (i == 3 && validator == "80") {
+                result = result?.plus(1)
+            } else if (i == 4 && validator == "108") {
+                result = result?.plus(1)
+            } else if (i == 5 && validator == "2") {
+                result = result?.plus(1)
+            } else if (i == 6 && validator == "d") {
+                result = result?.plus(1)
+            } else if (i == 7 && validator == "4800") {
+                result = result?.plus(1)
+            } else if (i == 8 && validator == "b") {
+                result = result?.plus(1)
+            } else if (i == 9 && validator== "116") {
+                result = result?.plus(1)
+            } else if (i == 10 && validator == "c") {
+                result = result?.plus(1)
+            }
+        }
     }
 
     private fun checkSfx(sfx: Boolean, hasil: String) {

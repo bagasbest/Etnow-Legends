@@ -37,7 +37,6 @@ class Stupa5Activity : AppCompatActivity() {
     private var binding: ActivityStupa5Binding? = null
     private var page: Int = 1
     private var result: Int? = 0
-    private var validator: String? = null
     private var isPicked: Boolean? = false
     private var time: Long? = 0L
     private var option: String? = null
@@ -61,6 +60,7 @@ class Stupa5Activity : AppCompatActivity() {
 
 
         binding?.back?.setOnClickListener {
+            deleteAllPageChoice()
             onBackPressed()
         }
 
@@ -84,7 +84,7 @@ class Stupa5Activity : AppCompatActivity() {
         }
 
         binding?.view17?.setOnClickListener {
-            if (page > 1 && option == "pembahasan") {
+            if (page > 1) {
                 page -= 1
                 selectedPage()
             }
@@ -104,35 +104,34 @@ class Stupa5Activity : AppCompatActivity() {
 
     }
 
+    private fun deleteAllPageChoice() {
+        for (i in 1..10) {
+            prefs.edit().remove("page$i").apply()
+        }
+    }
+
     private fun validateAns() {
         if (page <= 10) {
 
             answer = binding?.etAnswer?.text.toString().trim()
 
-            if (page == 1 && validator == "a") {
-                result = result?.plus(1)
-            } else if (page == 2 && validator == "b") {
-                result = result?.plus(1)
-            } else if (page == 3 && validator == "c") {
-                result = result?.plus(1)
-            } else if (page == 4 && validator == "c") {
-                result = result?.plus(1)
-            } else if (page == 5 && validator == "a") {
-                result = result?.plus(1)
-            } else if (page == 6 && answer == "12") {
-                result = result?.plus(1)
-            } else if (page == 7 && answer == "56") {
-                result = result?.plus(1)
-            } else if (page == 8 && answer == "192") {
-                result = result?.plus(1)
-            } else if (page == 9 && answer== "140") {
-                result = result?.plus(1)
-            } else if (page == 10 && answer == "3") {
-                result = result?.plus(1)
-                showPopupFinishQuiz()
-            }
-            else if(page == 10 && answer != "3"){
-                showPopupFinishQuiz()
+            when (page) {
+                6 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                7 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                8 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                9 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                }
+                10 -> {
+                    prefs.edit().putString("page$page", answer).apply()
+                    showPopupFinishQuiz()
+                }
             }
 
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
@@ -724,7 +723,7 @@ class Stupa5Activity : AppCompatActivity() {
 
     private fun pickedChoice() {
         binding?.a?.setOnClickListener {
-            validator = "a"
+            prefs.edit().putString("page$page", "a").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.darker_green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
@@ -733,7 +732,7 @@ class Stupa5Activity : AppCompatActivity() {
         }
 
         binding?.b?.setOnClickListener {
-            validator = "b"
+            prefs.edit().putString("page$page", "b").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.darker_green))
@@ -742,7 +741,7 @@ class Stupa5Activity : AppCompatActivity() {
         }
 
         binding?.c?.setOnClickListener {
-            validator = "c"
+            prefs.edit().putString("page$page", "c").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
@@ -751,7 +750,7 @@ class Stupa5Activity : AppCompatActivity() {
         }
 
         binding?.d?.setOnClickListener {
-            validator = "d"
+            prefs.edit().putString("page$page", "d").apply()
             isPicked = true
             binding?.a?.setBackgroundColor(resources.getColor(R.color.green))
             binding?.b?.setBackgroundColor(resources.getColor(R.color.green))
@@ -786,6 +785,10 @@ class Stupa5Activity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(binding.root)
 
+        if (option == "kerjakan") {
+            getPageChoice()
+        }
+
         val sfx = prefs.getBoolean("sfx", false)
         val name = prefs.getString("key", "")
         val school = prefs.getString("school", "")
@@ -812,6 +815,8 @@ class Stupa5Activity : AppCompatActivity() {
         binding.wrong.text = "Jawaban salah: ${10 - result!!}"
 
         binding.view19.setOnClickListener {
+            deleteAllPageChoice()
+            dialog.dismiss()
             val intent = Intent(this, HomeActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
@@ -819,6 +824,8 @@ class Stupa5Activity : AppCompatActivity() {
         }
 
         binding.view21.setOnClickListener {
+            deleteAllPageChoice()
+            dialog.dismiss()
             val intent = Intent(this, StupaActivity::class.java)
             startActivity(intent)
             finish()
@@ -828,7 +835,6 @@ class Stupa5Activity : AppCompatActivity() {
             dialog.dismiss()
             page = 1
             option = "pembahasan"
-            validator = ""
             selectedOption()
             selectedPage()
         }
@@ -882,6 +888,34 @@ class Stupa5Activity : AppCompatActivity() {
 
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
+    }
+
+    private fun getPageChoice() {
+        for (i in 1..10) {
+            val validator = prefs.getString("page$i", "")
+
+            if (i == 1 && validator == "a") {
+                result = result?.plus(1)
+            } else if (i == 2 && validator == "b") {
+                result = result?.plus(1)
+            } else if (i == 3 && validator == "c") {
+                result = result?.plus(1)
+            } else if (i == 4 && validator == "c") {
+                result = result?.plus(1)
+            } else if (i == 5 && validator == "a") {
+                result = result?.plus(1)
+            } else if (i == 6 && validator == "12") {
+                result = result?.plus(1)
+            } else if (i == 7 && validator == "56") {
+                result = result?.plus(1)
+            } else if (i == 8 && validator == "192") {
+                result = result?.plus(1)
+            } else if (i == 9 && validator== "140") {
+                result = result?.plus(1)
+            } else if (i == 10 && validator == "3") {
+                result = result?.plus(1)
+            }
+        }
     }
 
     private fun checkSfx(sfx: Boolean, hasil: String) {
